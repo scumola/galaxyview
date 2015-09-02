@@ -1,0 +1,21 @@
+19 Feb 2003
+
+GalaxyView as currently distributed is version 2.85 and was developed
+by Roland Schulz. In February of 2003 he put the code under the GPL 
+and I started "maintaining" it.
+
+A principal desire of mine is to have a native Linux client (the current
+client can run under Wine once you get the expanded archive from someone
+else - the current self extracting archive won't work under wine.)
+
+Since the original was written under Borland's Delphi, I first attempted
+to use Kylix to compile for Linux. The problem is that there is a lot of
+code that is Windows specific and coding around that in addition to 
+maintaining multiple versions of forms pretty much ruled out further 
+development in the original pascal.
+
+The intent of the new, Version 3 GalaxyView is to use wxWindows and
+MetaKit as the basis for a platform independent client that will 
+maintain the original functionality of GalaxyView, fix bugs that still 
+existed (not too many), and add new functionality.
+

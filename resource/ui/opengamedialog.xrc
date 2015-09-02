@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resource version="2.4.0.1">
+
+  <object class="wxDialog" name="opengame_dialog">
+    <title>Open Game</title>
+<!--    <size>200,300</size> -->
+    
+    <object class="wxBoxSizer">
+		<orient>wxVERTICAL</orient>
+		
+		<object class="sizeritem">
+			<flag>wxALIGN_TOP|wxALL</flag>
+			<border>5</border>
+			<object class="wxStaticText" name="loadgame_statictext">
+				<label>Open existing game:</label>
+			</object>
+		</object>
+		
+		<object class="sizeritem">
+			<flag>wxALIGN_CENTRE_VERTICAL|wxALL|wxEXPAND</flag>
+			<border>5</border>
+			<object class="wxTreeCtrl" name="loadgame_gamelist">
+				<size>-1,200</size>
+			</object>
+		</object>
+		
+		<object class="sizeritem">
+			<flag>wxALIGN_BOTTOM|wxALL</flag>
+			<border>5</border>
+			<object class="wxPanel">
+		
+				<object class="wxBoxSizer">
+					<orient>wxHORIZONTAL</orient>
+					<object class="sizeritem">		
+						<flag>wxGROW|wxALIGN_LEFT|wxALL</flag>
+						<border>5</border>
+						<object class="wxButton" name="loadgame_ok">
+							<label>Open</label>
+						</object>
+					</object>
+					
+					<object class="sizeritem">
+						<flag>wxALIGN_CENTRE|wxALL</flag>
+						<border>5</border>
+						<object class="wxButton" name="loadgame_newgame">
+							<label>New...</label>
+						</object>
+					</object>
+
+					<object class="sizeritem">		
+						<flag>wxALIGN_RIGHT|wxALL</flag>	
+						<border>5</border>
+						<object class="wxButton" name="loadgame_cancel">
+							<default>0</default>
+							<label>Cancel</label>
+						</object>
+					</object>
+								
+				</object>			
+				
+			</object>			
+			
+		</object>
+		
+	</object>
+  
+  </object>
+  
+</resource>

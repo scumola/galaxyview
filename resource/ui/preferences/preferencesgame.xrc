@@ -1,0 +1,220 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resource version="2.4.0.1">
+
+  <object class="wxPanel" name="preferences_game_panel">
+    <size>265,300</size>
+		<style/>
+
+		<object class="wxFlexGridSizer">
+			<cols>1</cols>
+			<rows>3</rows>
+			<hgap>5</hgap>
+			<vgap>5</vgap>
+			<growablecols>0</growablecols>
+
+			<!-- User Settings -->
+			<object class="sizeritem">
+				<flag>wxGROW</flag>			
+				<object class="wxStaticBoxSizer">
+					<label>User Settings</label>
+					<orient>wxVERTICAL</orient>
+
+					<object class="sizeritem">
+						<flag>wxGROW</flag>
+						<object class="wxFlexGridSizer">
+							<cols>2</cols>
+							<rows>3</rows>
+							<hgap>5</hgap>
+							<vgap>5</vgap>
+							<growablecols>1</growablecols>
+
+                                                        <!-- Race Name -->
+                                                        <object class="sizeritem">
+                                                                <object class="wxStaticText">
+                                                                        <label>Race Name:</label>
+                                                                </object>
+                                                                <flag>wxALIGN_RIGHT|wxALIGN_CENTER_VERTICAL</flag>
+                                                        </object>
+                                                                                                                               
+                                                        <object class="sizeritem">
+                                                                <object class="wxTextCtrl" name="game_user_racename"/>
+                                                                <flag>wxGROW</flag>
+                                                        </object>
+
+							<!-- Game Password -->
+							<object class="sizeritem">
+								<object class="wxStaticText">
+									<label>Password:</label>
+								</object>
+								<flag>wxALIGN_RIGHT|wxALIGN_CENTER_VERTICAL</flag>
+							</object>
+
+							<object class="sizeritem">
+								<object class="wxTextCtrl" name="game_user_password">
+									<style>wxTE_PASSWORD</style>
+								</object>
+								<flag>wxGROW</flag>
+							</object>
+												
+						</object>
+					</object>
+
+				</object>
+			</object>
+
+			<object class="sizeritem">
+				<flags>wxGROW</flags>
+				<object class="wxStaticBoxSizer">
+					<label>Bookmark Settings</label>
+					<orient>wxVERTICAL</orient>
+					
+					<object class="sizeritem">
+										
+						<flag>wxGROW</flag>
+						<object class="wxFlexGridSizer">
+							<cols>2</cols>
+							<rows>2</rows>
+							<hgap>5</hgap>
+							<vgap>5</vgap>
+							<growablecols>1</growablecols>
+							
+							<object class="spacer"/>
+									
+							<!-- Save the default bookmark on exit -->
+							<object class="sizeritem">
+								<flags>wxGROW</flags>
+								<object class="wxCheckBox" name="game_bookmark_defaultsave_active">
+									<label>Save Bookmark Data on exit</label>
+								</object>
+							</object>
+							
+							<object class="sizeritem">
+								<object class="wxStaticText">
+									<label>Use Slot:</label>
+								</object>
+							</object>
+							
+							<object class="sizeritem">
+								<object class="wxComboBox" name="game_bookmark_defaultsave">
+									<style>wxCB_READONLY</style>
+									<item>A</item>
+									<item>B</item>
+									<item>C</item>
+									<item>D</item>
+									<item>E</item>
+									<item>F</item>
+									<item>G</item>
+									<item>H</item>
+									<item>I</item>
+									<item>J</item>
+									<item>K</item>
+									<item>L</item>
+									<item>M</item>
+									<item>N</item>
+									<item>O</item>
+									<item>P</item>
+									<item>Q</item>
+									<item>R</item>
+									<item>S</item>
+									<item>T</item>
+									<item>U</item>
+									<item>V</item>
+									<item>W</item>
+									<item>X</item>
+									<item>Y</item>
+									<item>Z</item>
+									<selection>0</selection>						
+								</object>
+							</object>
+						</object>
+					</object>
+				</object>	
+			</object>			
+			
+			<!-- Game Settings -->
+			<object class="sizeritem">
+				<flag>wxGROW</flag>			
+				<object class="wxStaticBoxSizer">
+					<label>Game Settings</label>
+					<orient>wxVERTICAL</orient>
+
+					<object class="sizeritem">
+						<flag>wxGROW</flag>
+						<object class="wxFlexGridSizer">
+							<cols>2</cols>
+							<rows>4</rows>
+							<hgap>5</hgap>
+							<vgap>5</vgap>
+							<growablecols>1</growablecols>
+
+							<!-- Gametype -->
+							<object class="sizeritem">
+								<object class="wxStaticText">
+									<label>Gametype:</label>
+								</object>
+								<flag>wxALIGN_RIGHT|wxALIGN_CENTER_VERTICAL</flag>
+							</object>
+
+							<object class="sizeritem">
+								<object class="wxComboBox" name="game_gametypes">
+									<style>wxCB_READONLY</style>
+									<selection>0</selection>
+									<content>
+										<item>Galaxy Standard</item>
+										<item>BlindGalaxy</item>
+										<item>GalaxyNG</item>
+										<item>Galaxy Explorer</item>
+										<item>GalaxyPlus</item>
+									</content>
+								</object>
+								<flag>wxGROW</flag>
+							</object>
+
+							<!-- Game Name -->
+							<object class="sizeritem">
+								<object class="wxStaticText">
+									<label>Game Name:</label>
+								</object>
+								<flag>wxALIGN_RIGHT|wxALIGN_CENTER_VERTICAL</flag>
+							</object>
+
+							<object class="sizeritem">
+								<object class="wxTextCtrl" name="game_gamename"/>
+								<flag>wxGROW</flag>
+							</object>
+
+							<!-- Number of Homeplanets -->
+							<object class="sizeritem">
+								<object class="wxStaticText">
+									<label>Number of Homeplanets:</label>
+								</object>
+								<flag>wxALIGN_RIGHT|wxALIGN_CENTER_VERTICAL</flag>
+							</object>
+
+							<object class="sizeritem">
+								<object class="wxTextCtrl" name="game_homeplanets_number"/>
+							</object>
+						
+							<!-- Size of Homeplanets -->
+							<object class="sizeritem">
+								<object class="wxStaticText">
+									<label>Size of Homeplanets:</label>
+								</object>
+								<flag>wxALIGN_RIGHT|wxALIGN_CENTER_VERTICAL</flag>
+							</object>
+
+							<object class="sizeritem">
+								<object class="wxTextCtrl" name="game_homeplanets_sizes"/>
+								<flag>wxGROW</flag>
+							</object>
+
+						</object>
+					</object>
+
+				</object>
+			</object>
+
+		</object>
+
+  </object>
+</resource>

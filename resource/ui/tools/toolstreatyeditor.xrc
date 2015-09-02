@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resource version="2.4.0.1">
+
+	<object class="wxPanel" name="tools_treatyeditor">
+		<size/>
+		<style/>
+
+		<object class="wxFlexGridSizer">
+			<cols>2</cols>
+			<rows>1</rows>
+			<hgap>5</hgap>
+			<vgap>5</vgap>
+			<growablecols>0</growablecols>
+			<growablerows>0</growablerows>
+
+			<!-- Grid Panel -->
+			<object class="sizeritem">
+				<flag>wxGROW</flag>
+				<object class="wxPanel" name="treatyeditor_gridpanel">
+					<size>400,300</size>
+				</object>
+			</object>
+
+			<object class="sizeritem">
+				<flag>wxGROW</flag>
+				<object class="wxFlexGridSizer">
+					<cols>1</cols>
+					<rows>8</rows>
+					<hgap>5</hgap>
+					<vgap>5</vgap>
+					<growablecols>0</growablecols>
+
+					<!-- New Button -->
+					<object class="sizeritem">
+						<flag>wxALL|wxALIGN_CENTER</flag>
+						<object class="wxButton" name="treatyeditor_newbutton">
+							<size>72,-1</size>
+							<label>New</label>
+						</object>
+					</object>
+
+					<!-- Delete Button -->
+					<object class="sizeritem">
+						<flag>wxALL|wxALIGN_CENTER</flag>
+						<object class="wxButton" name="treatyeditor_deletebutton">
+							<size>72,-1</size>
+							<label>Delete</label>
+						</object>
+					</object>
+
+					<!-- Race Selection -->
+					<object class="sizeritem">
+						<object class="wxStaticText">
+							<label>Select Race</label>
+						</object>
+					</object>
+
+					<object class="sizeritem">
+						<flag>wxGROW</flag>
+						<object class="wxListCtrl" name="treatyeditor_racelistctrl">
+							<style>wxLC_SINGLE_SEL</style>
+						</object>
+					</object>
+
+					<!-- Planet Selection -->
+					<object class="sizeritem">
+						<object class="wxStaticText">
+							<label>Select Planet</label>
+						</object>
+					</object>
+
+					<object class="sizeritem">
+						<flag>wxGROW</flag>
+						<object class="wxListCtrl" name="treatyeditor_planetlistctrl">
+							<style>wxLC_SINGLE_SEL</style>
+						</object>
+					</object>
+
+					<!-- Save Button -->
+					<object class="sizeritem">
+						<flag>wxALL|wxALIGN_CENTER</flag>
+						<object class="wxButton" name="treatyeditor_savebutton">
+							<size>72,-1</size>
+							<label>Save</label>
+						</object>
+					</object>
+
+					<!-- Print Button -->
+					<object class="sizeritem">
+						<flag>wxALL|wxALIGN_CENTER</flag>
+						<object class="wxButton" name="treatyeditor_printbutton">
+							<size>72,-1</size>
+							<label>Print</label>
+						</object>
+					</object>
+
+				</object>
+			</object>
+
+		</object>
+
+	</object>
+</resource>

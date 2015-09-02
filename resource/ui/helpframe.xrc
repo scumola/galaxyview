@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resource version="2.4.0.1">
+
+	<object class="wxToolBar" name="helpframe_toolbar">
+		<style>wxTB_FLAT</style>
+		<margins>0,0</margins>
+		<object class="tool" name="helpframe_back">
+			<bitmap>../buttons/help_back.png</bitmap>
+			<tooltip>Back</tooltip>
+		</object>
+		<object class="tool" name="helpframe_forward">
+			<bitmap>../buttons/help_forward.png</bitmap>
+			<tooltip>Forward</tooltip>
+		</object>
+		
+		<object class="separator"/>
+		
+		<object class="tool" name="helpframe_home">
+			<bitmap>../buttons/help_home.png</bitmap>
+			<tooltip>Table Of Contents</tooltip>
+		</object>
+	</object>
+
+	<object class="wxFrame" name="helpframe">
+		<title>GalaxyView Help - Loading...</title>	
+
+		<object class="wxHtmlWindow" name="helpframe_html">
+			<htmlcode>Loading...</htmlcode>
+			<size>400,500</size>					
+		</object>
+	</object>
+</resource>
+

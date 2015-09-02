@@ -1,0 +1,39 @@
+		 Starting new source and header files
+
+
+In the main directory you'll find two files, template.h and
+template.cpp. These are meant to be used when creating new class files
+so that all of them have the proper copyright notice, etc.
+
+After you've copied the template to the class name, edit each one and
+do a couple of text substitutions:
+
+ClassName.h
+
+    1) substitute the string HEADERNAME with the class name in all
+       caps. s/HEADERNAME/CLASSNAME/
+
+    2) substitute the string HeaderName with the class name properly
+       capitalized. s/HeaderName/ClassName/
+
+    3) substitute the string USED_FOR with a short 3 or 4 word phrase
+       describing the purpose of this header. 
+       s/USED_FOR/class purpose/
+
+    4) delete the line  "// definitions go here" and start coding
+
+ClassName.cpp
+
+    1) substitute the string SrcName with the class name properly
+       capitalized. s/SrcName/ClassName/
+
+    2) substitute the string USED_FOR with a short 3 or 4 word phrase
+       describing the purpose of this class.
+       s/USED_FOR/class purpose/
+
+    3) go to the bottom of the file and start coding
+
+
+One of the features of the .cpp template is that you'll automatically
+get the include for the class header. If this doesn't happen to be a
+class file then you can just delete that line.

@@ -1,0 +1,587 @@
+# Anjuta Version 1.1.98 
+Compatibility Level: 1 
+
+<PROJECT_DESCRIPTION_START>
+<PROJECT_DESCRIPTION_END>
+<CONFIG_PROGS_START>
+<CONFIG_PROGS_END>
+<CONFIG_LIBS_START>
+<CONFIG_LIBS_END>
+<CONFIG_HEADERS_START>
+<CONFIG_HEADERS_END>
+<CONFIG_CHARACTERISTICS_START>
+<CONFIG_CHARACTERISTICS_END>
+<CONFIG_LIB_FUNCS_START>
+<CONFIG_LIB_FUNCS_END>
+<CONFIG_ADDITIONAL_START>
+<CONFIG_ADDITIONAL_END>
+<CONFIG_FILES_START>
+<CONFIG_FILES_END>
+<MAKEFILE_AM_START>
+<MAKEFILE_AM_END>
+
+props.file.type=project
+
+anjuta.version=1.1.98
+anjuta.compatibility.level=1
+
+project.name=galaxyview
+project.type=GENERIC
+project.target.type=EXECUTABLE
+project.version=3.0
+project.author=Quarter-Flash Design Group
+project.source.target=GalaxyView
+project.has.gettext=0
+project.gui.command=
+project.programming.language=C_C++
+project.excluded.modules=intl
+
+project.config.extra.modules.before=
+project.config.extra.modules.after=
+project.config.blocked=1
+project.config.disable.overwriting=1 1 1 1 1 1 1 1 1 
+
+project.menu.entry=galaxyview Version 3.0
+project.menu.group=Application
+project.menu.comment=galaxyview Version 3.0
+project.menu.icon=
+project.menu.need.terminal=0
+
+project.configure.options=
+anjuta.program.arguments=
+preferences.build.option.jobs=0
+preferences.build.option.silent=0
+preferences.build.option.autosave=0
+preferences.anjuta.make.options=-k
+preferences.make=make
+preferences.build.option.keep.going=1
+preferences.build.option.warn.undef=0
+preferences.autoformat.custom.style= -i8 -sc -bli0 -bl0 -cbi0 -ss
+preferences.autoformat.style=Style of Kangleipak
+preferences.indent.opening=0
+preferences.autoformat.disable=1
+preferences.indent.automatic=1
+preferences.use.tabs=1
+preferences.indent.size=4
+preferences.tabsize=4
+preferences.indent.closing=0
+
+module.include.name=.
+module.include.type=
+module.include.files=\
+	GVApp.h\
+	GVDBAliens.h\
+	GVDBBulletin.h\
+	GVDBGeneral.h\
+	GVDBObject.h\
+	GVDBOptions.h\
+	GVDBPlanets.h\
+	GVDBStatus.h\
+	GVDialogs.h\
+	GVError.h\
+	GVFrame.h\
+	GVGalaxy.h\
+	GVGalaxyNGReport.h\
+	GVGalaxyObject.h\
+	GVGame.h\
+	GVGroup.h\
+	GVHelpFrame.h\
+	GVInfoView.h\
+	GVMapPanel.h\
+	GVNewGameDialog.h\
+	GVOpenGameDialog.h\
+	GVOptions.h\
+	GVParseReport.h\
+	GVPlanet.h\
+	GVRace.h\
+	GVShipDesign.h\
+	GVStateDefs.h\
+	GVStateLookup.h\
+	GVToolBar.h\
+	GVdb.h\
+	GVdefines.h\
+	GVparser.h\
+	XMLParser.h\
+	bookmark.h\
+	resource.h\
+	storage.h\
+	system.h\
+	template.h\
+	infoviews/GVInfoPlanets.h\
+	preferences/GVPreferences.h\
+	preferences/GVPreferencesGame.h\
+	preferences/GVPreferencesGeneral.h\
+	sqlite++/Query.h\
+	sqlite++/Result.h\
+	sqlite++/Row.h\
+	sqlite++/SQLiteFile.h\
+	sqlite++/sqlite++.h\
+	tools/GVTools.h\
+	tools/GVToolsBattleSimulator.h\
+	tools/GVToolsCalculator.h\
+	tools/GVToolsIntelligence.h\
+	tools/GVToolsMessageCenter.h\
+	tools/GVToolsMoveEditor.h\
+	tools/GVToolsPlanetEditor.h\
+	tools/GVToolsShipDesigner.h\
+	tools/GVToolsTextEditor.h\
+	tools/GVToolsTreatyEditor.h\
+	xtd/expat/asciitab.h\
+	xtd/expat/ascii.h\
+	xtd/expat/iasciitab.h\
+	xtd/expat/latin1tab.h\
+	xtd/expat/nametab.h\
+	xtd/expat/utf8tab.h\
+	xtd/expat/xmldef.h\
+	xtd/expat/xmlparse.h\
+	xtd/expat/xmlrole.h\
+	xtd/expat/xmltok.h\
+	xtd/expat/xmltok_impl.h\
+	GVAddBookmarkDialog.h\
+	GVDeleteBookmarkDialog.h
+
+module.source.name=.
+module.source.type=
+module.source.files=\
+	GVApp.cpp\
+	GVDBAliens.cpp\
+	GVDBBulletin.cpp\
+	GVDBOptions.cpp\
+	GVDBPlanets.cpp\
+	GVDBStatus.cpp\
+	GVError.cpp\
+	GVFrame.cpp\
+	GVGalaxy.cpp\
+	GVGalaxyNGReport.cpp\
+	GVGame.cpp\
+	GVHelpFrame.cpp\
+	GVInfoView.cpp\
+	GVMapPanel.cpp\
+	GVNewGameDialog.cpp\
+	GVOpenGameDialog.cpp\
+	GVOptions.cpp\
+	GVParseReport.cpp\
+	GVPlanet.cpp\
+	GVStateLookup.cpp\
+	GVToolBar.cpp\
+	GVdb.cpp\
+	XMLParser.cpp\
+	bookmark.cpp\
+	infoviews/GVInfoPlanets.cpp\
+	preferences/GVPreferences.cpp\
+	preferences/GVPreferencesGame.cpp\
+	preferences/GVPreferencesGeneral.cpp\
+	sqlite++/Query.cpp\
+	sqlite++/Result.cpp\
+	sqlite++/Row.cpp\
+	sqlite++/SQLiteFile.cpp\
+	tools/GVTools.cpp\
+	tools/GVToolsBattleSimulator.cpp\
+	tools/GVToolsCalculator.cpp\
+	tools/GVToolsIntelligence.cpp\
+	tools/GVToolsMessageCenter.cpp\
+	tools/GVToolsMoveEditor.cpp\
+	tools/GVToolsPlanetEditor.cpp\
+	tools/GVToolsShipDesigner.cpp\
+	tools/GVToolsTextEditor.cpp\
+	tools/GVToolsTreatyEditor.cpp\
+	xtd/expat/xmlparse.c\
+	xtd/expat/xmlrole.c\
+	xtd/expat/xmltok.c\
+	xtd/expat/xmltok_impl.c\
+	xtd/expat/xmltok_ns.c\
+	GVAddBookmarkDialog.cpp\
+	GVDeleteBookmarkDialog.cpp
+
+module.pixmap.name=.
+module.pixmap.type=
+module.pixmap.files=\
+	GalaxyViewPic.xpm\
+	colours.bmp\
+	resource/buttons/bar_graphs_group.png\
+	resource/buttons/bar_graphs_planet.png\
+	resource/buttons/battle_simulator.png\
+	resource/buttons/battles.png\
+	resource/buttons/battles_mass.png\
+	resource/buttons/battles_tbl.png\
+	resource/buttons/blank.png\
+	resource/buttons/bombings.png\
+	resource/buttons/bombings_size.png\
+	resource/buttons/bombings_tbl.png\
+	resource/buttons/bookmark_add.png\
+	resource/buttons/borders.png\
+	resource/buttons/borders_named.png\
+	resource/buttons/calculator.png\
+	resource/buttons/circles.png\
+	resource/buttons/distance.png\
+	resource/buttons/find_planet.png\
+	resource/buttons/find_race.png\
+	resource/buttons/fleets_tbl.png\
+	resource/buttons/groups.png\
+	resource/buttons/groups_cap.png\
+	resource/buttons/groups_col.png\
+	resource/buttons/groups_emp.png\
+	resource/buttons/groups_hyperspace.png\
+	resource/buttons/groups_incoming.png\
+	resource/buttons/groups_mass.png\
+	resource/buttons/groups_mat.png\
+	resource/buttons/groups_other.png\
+	resource/buttons/groups_planets.png\
+	resource/buttons/groups_selected.png\
+	resource/buttons/groups_tbl.png\
+	resource/buttons/help_back.png\
+	resource/buttons/help_forward.png\
+	resource/buttons/help_home.png\
+	resource/buttons/incoming_tbl.png\
+	resource/buttons/intel_center.png\
+	resource/buttons/map_print.png\
+	resource/buttons/map_save.png\
+	resource/buttons/message_center.png\
+	resource/buttons/move_editor.png\
+	resource/buttons/names_planets.png\
+	resource/buttons/names_races.png\
+	resource/buttons/planet_developer.png\
+	resource/buttons/planet_flags.png\
+	resource/buttons/planet_size.png\
+	resource/buttons/planeteditor.png\
+	resource/buttons/planets_tbl.png\
+	resource/buttons/play_film.png\
+	resource/buttons/production_tbl.png\
+	resource/buttons/races_tbl.png\
+	resource/buttons/route_cap.png\
+	resource/buttons/route_col.png\
+	resource/buttons/route_emp.png\
+	resource/buttons/route_mat.png\
+	resource/buttons/routes_tbl.png\
+	resource/buttons/separator.png\
+	resource/buttons/ship_designer.png\
+	resource/buttons/ship_types_tbl.png\
+	resource/buttons/showshipmasses.png\
+	resource/buttons/stockpiles_tbl.png\
+	resource/buttons/text_editor.png\
+	resource/buttons/treaty_editor.png\
+	resource/buttons/turn_ahead_ten.png\
+	resource/buttons/turn_back_ten.png\
+	resource/buttons/turn_charts.png\
+	resource/buttons/turn_forecast.png\
+	resource/buttons/turn_next.png\
+	resource/buttons/turn_overview.png\
+	resource/buttons/turn_previous.png\
+	resource/buttons/turn_report.png\
+	resource/buttons/zoom_in.png\
+	resource/buttons/zoom_mouse.png\
+	resource/buttons/zoom_out.png\
+	resource/icons/eye_in_16x16x16.ico\
+	resource/icons/eye_in_16x16x16.png\
+	resource/icons/eye_in_16x16x256.ico\
+	resource/icons/eye_in_16x16x256.png\
+	resource/icons/eye_in_32x32x16.ico\
+	resource/icons/eye_in_32x32x16.png\
+	resource/icons/eye_in_32x32x256.ico\
+	resource/icons/eye_in_32x32x256.png\
+	resource/icons/eye_over_16x16x16.ico\
+	resource/icons/eye_over_16x16x16.png\
+	resource/icons/eye_over_16x16x256.ico\
+	resource/icons/eye_over_16x16x256.png\
+	resource/icons/eye_over_32x32x16.ico\
+	resource/icons/eye_over_32x32x16.png\
+	resource/icons/eye_over_32x32x256.ico\
+	resource/icons/eye_over_32x32x256.png\
+	resource/icons/favicon.ico\
+	resource/icons/old_16x16x16.ico\
+	resource/icons/old_16x16x16.png\
+	resource/icons/old_32x32x16.ico\
+	resource/icons/old_32x32x16.png\
+	resource/screenshots/turn1.jpg\
+	resource/screenshots/map.png\
+	html/doxygen.png\
+	html/classGVDBObject.png\
+	html/classGVGalaxyNGReport.png\
+	html/ftv2blank.png\
+	html/ftv2doc.png\
+	html/ftv2folderclosed.png\
+	html/ftv2folderopen.png\
+	html/ftv2lastnode.png\
+	html/ftv2link.png\
+	html/ftv2mlastnode.png\
+	html/ftv2mnode.png\
+	html/ftv2node.png\
+	html/ftv2plastnode.png\
+	html/ftv2pnode.png\
+	html/ftv2vertline.png
+
+module.data.name=.
+module.data.type=
+module.data.files=
+
+module.help.name=.
+module.help.type=
+module.help.files=
+
+module.doc.name=.
+module.doc.type=
+module.doc.files=\
+	ChangeLog\
+	AUTHORS\
+	COPYING\
+	NEWS\
+	README\
+	help/bar_graphs_group.html\
+	help/bar_graphs_planet.html\
+	help/battle_simulator.html\
+	help/battles.html\
+	help/battles_mass.html\
+	help/battles_tbl.html\
+	help/bombings.html\
+	help/bombings_size.html\
+	help/bombings_tbl.html\
+	help/bookmark_a.html\
+	help/bookmark_add.html\
+	help/borders.html\
+	help/borders_named.html\
+	help/calculator.html\
+	help/circles.html\
+	help/distance.html\
+	help/edit_game.html\
+	help/exit.html\
+	help/find_planet.html\
+	help/find_race.html\
+	help/fleets_tbl.html\
+	help/groups.html\
+	help/groups_cap.html\
+	help/groups_col.html\
+	help/groups_emp.html\
+	help/groups_hyperspace.html\
+	help/groups_incoming.html\
+	help/groups_mass.html\
+	help/groups_mat.html\
+	help/groups_other.html\
+	help/groups_planets.html\
+	help/groups_selected.html\
+	help/groups_tbl.html\
+	help/incoming_tbl.html\
+	help/index.html\
+	help/intel_center.html\
+	help/load_game.html\
+	help/map_print.html\
+	help/map_save.html\
+	help/message_center.html\
+	help/move_editor.html\
+	help/names_planets.html\
+	help/names_races.html\
+	help/new_game.html\
+	help/planet_developer.html\
+	help/planet_flags.html\
+	help/planet_size.html\
+	help/planets_tbl.html\
+	help/play_film.html\
+	help/preferences.html\
+	help/production_tbl.html\
+	help/races_tbl.html\
+	help/route_cap.html\
+	help/route_col.html\
+	help/route_emp.html\
+	help/route_mat.html\
+	help/routes_tbl.html\
+	help/ship_designer.html\
+	help/ship_types_tbl.html\
+	help/stockpiles_tbl.html\
+	help/text_editor.html\
+	help/treaty_editor.html\
+	help/turn_ahead_ten.html\
+	help/turn_back_ten.html\
+	help/turn_charts.html\
+	help/turn_forecast.html\
+	help/turn_next.html\
+	help/turn_overview.html\
+	help/turn_previous.html\
+	help/turn_report.html\
+	help/zoom_in.html\
+	help/zoom_mouse.html\
+	help/zoom_out.html\
+	html/main.html\
+	html/files.html\
+	html/ascii_8h-source.html\
+	html/asciitab_8h-source.html\
+	html/bookmark_8h-source.html\
+	html/GVApp_8h-source.html\
+	html/GVdb_8h-source.html\
+	html/GVDBAliens_8h-source.html\
+	html/GVDBBulletin_8h-source.html\
+	html/GVDBGeneral_8h-source.html\
+	html/GVDBObject_8h-source.html\
+	html/GVDBOptions_8h-source.html\
+	html/GVDBPlanets_8h-source.html\
+	html/GVDBStatus_8h-source.html\
+	html/GVdefines_8h-source.html\
+	html/GVDialogs_8h-source.html\
+	html/GVError_8h-source.html\
+	html/GVFrame_8h-source.html\
+	html/GVGalaxy_8h-source.html\
+	html/GVGalaxyNGReport_8h-source.html\
+	html/GVGalaxyObject_8h-source.html\
+	html/GVGame_8h-source.html\
+	html/GVGroup_8h-source.html\
+	html/GVHelpFrame_8h-source.html\
+	html/GVInfoPlanets_8h-source.html\
+	html/GVInfoView_8h-source.html\
+	html/GVMapPanel_8h-source.html\
+	html/GVNewGameDialog_8h-source.html\
+	html/GVOpenGameDialog_8h-source.html\
+	html/GVOptions_8h-source.html\
+	html/GVparser_8h-source.html\
+	html/GVParseReport_8h-source.html\
+	html/GVPlanet_8h-source.html\
+	html/GVPreferences_8h-source.html\
+	html/GVPreferencesGame_8h-source.html\
+	html/GVPreferencesGeneral_8h-source.html\
+	html/GVRace_8h-source.html\
+	html/GVShipDesign_8h-source.html\
+	html/GVStateLookup_8h-source.html\
+	html/GVToolBar_8h-source.html\
+	html/GVTools_8h-source.html\
+	html/GVToolsBattleSimulator_8h-source.html\
+	html/GVToolsCalculator_8h-source.html\
+	html/GVToolsIntelligence_8h-source.html\
+	html/GVToolsMessageCenter_8h-source.html\
+	html/GVToolsMoveEditor_8h-source.html\
+	html/GVToolsPlanetEditor_8h-source.html\
+	html/GVToolsShipDesigner_8h-source.html\
+	html/GVToolsTextEditor_8h-source.html\
+	html/GVToolsTreatyEditor_8h-source.html\
+	html/iasciitab_8h-source.html\
+	html/latin1tab_8h-source.html\
+	html/nametab_8h-source.html\
+	html/Query_8h-source.html\
+	html/resource_8h-source.html\
+	html/Result_8h-source.html\
+	html/Row_8h-source.html\
+	html/sqlite++_8h-source.html\
+	html/SQLiteFile_8h-source.html\
+	html/system_8h-source.html\
+	html/utf8tab_8h-source.html\
+	html/xmldef_8h-source.html\
+	html/xmlparse_8h-source.html\
+	html/XMLParser_8h-source.html\
+	html/xmlrole_8h-source.html\
+	html/xmltok_8h-source.html\
+	html/xmltok__impl_8h-source.html\
+	html/bookmark_8cpp.html\
+	html/bookmark_8h.html\
+	html/GVApp_8cpp.html\
+	html/GVApp_8h.html\
+	html/GVdb_8cpp.html\
+	html/GVdb_8h.html\
+	html/GVDBAliens_8cpp.html\
+	html/GVDBAliens_8h.html\
+	html/GVDBBulletin_8cpp.html\
+	html/GVDBBulletin_8h.html\
+	html/GVDBGeneral_8h.html\
+	html/GVDBObject_8h.html\
+	html/GVDBOptions_8cpp.html\
+	html/GVDBOptions_8h.html\
+	html/GVDBPlanets_8h.html\
+	html/GVDBStatus_8cpp.html\
+	html/GVDBStatus_8h.html\
+	html/GVDialogs_8h.html\
+	html/GVError_8cpp.html\
+	html/GVError_8h.html\
+	html/GVFrame_8cpp.html\
+	html/GVFrame_8h.html\
+	html/GVGalaxy_8cpp.html\
+	html/GVGalaxy_8h.html\
+	html/GVGalaxyNGReport_8h.html\
+	html/GVGalaxyObject_8h.html\
+	html/GVGame_8cpp.html\
+	html/GVGame_8h.html\
+	html/GVInfoPlanets_8cpp.html\
+	html/GVInfoPlanets_8h.html\
+	html/GVInfoView_8cpp.html\
+	html/GVInfoView_8h.html\
+	html/GVMapPanel_8cpp.html\
+	html/GVNewGameDialog_8cpp.html\
+	html/GVNewGameDialog_8h.html\
+	html/GVOpenGameDialog_8cpp.html\
+	html/GVOptions_8cpp.html\
+	html/GVOptions_8h.html\
+	html/GVparser_8h.html\
+	html/GVParseReport_8cpp.html\
+	html/GVParseReport_8h.html\
+	html/GVPlanet_8cpp.html\
+	html/GVPreferences_8cpp.html\
+	html/GVPreferences_8h.html\
+	html/GVPreferencesGame_8cpp.html\
+	html/GVPreferencesGame_8h.html\
+	html/GVPreferencesGeneral_8cpp.html\
+	html/GVPreferencesGeneral_8h.html\
+	html/GVToolBar_8h.html\
+	html/GVTools_8cpp.html\
+	html/GVTools_8h.html\
+	html/GVToolsBattleSimulator_8cpp.html\
+	html/GVToolsBattleSimulator_8h.html\
+	html/GVToolsCalculator_8cpp.html\
+	html/GVToolsCalculator_8h.html\
+	html/GVToolsIntelligence_8cpp.html\
+	html/GVToolsIntelligence_8h.html\
+	html/GVToolsMessageCenter_8cpp.html\
+	html/GVToolsMessageCenter_8h.html\
+	html/GVToolsMoveEditor_8cpp.html\
+	html/GVToolsMoveEditor_8h.html\
+	html/GVToolsPlanetEditor_8cpp.html\
+	html/GVToolsPlanetEditor_8h.html\
+	html/GVToolsShipDesigner_8cpp.html\
+	html/GVToolsShipDesigner_8h.html\
+	html/GVToolsTextEditor_8cpp.html\
+	html/GVToolsTextEditor_8h.html\
+	html/GVToolsTreatyEditor_8cpp.html\
+	html/GVToolsTreatyEditor_8h.html\
+	html/Query_8cpp.html\
+	html/Query_8h.html\
+	html/Result_8cpp.html\
+	html/Result_8h.html\
+	html/Row_8cpp.html\
+	html/Row_8h.html\
+	html/sqlite++_8h.html\
+	html/SQLiteFile_8cpp.html\
+	html/SQLiteFile_8h.html\
+	html/XMLParser_8cpp.html\
+	html/XMLParser_8h.html\
+	html/annotated.html\
+	html/hierarchy.html\
+	html/functions.html\
+	html/classGVdb.html\
+	html/classGVdb-members.html\
+	html/classGVDBObject.html\
+	html/classGVDBObject-members.html\
+	html/classGVGalaxyNGReport.html\
+	html/classGVGalaxyNGReport-members.html\
+	html/classGVparser.html\
+	html/classGVparser-members.html\
+	html/classQuery.html\
+	html/classQuery-members.html\
+	html/classwxStringSorter.html\
+	html/classwxStringSorter-members.html\
+	html/globals.html\
+	html/index.html\
+	html/tree.html
+
+module.po.files=
+
+compiler.options.supports=
+compiler.options.include.paths=\
+	.\
+	..
+compiler.options.library.paths=
+compiler.options.libraries=
+compiler.options.libraries.selected=
+compiler.options.defines=\
+	HAVE_CONFIG_H
+compiler.options.defines.selected=
+compiler.options.warning.buttons=0 0 1 1 0 1 0 0 0 0 0 0 0 1 0 0 
+compiler.options.optimize.buttons=0 0 1 0 
+compiler.options.other.buttons=1 0 
+compiler.options.other.c.flags=
+compiler.options.other.l.flags=
+compiler.options.other.l.libs=
+
+project.src.paths=

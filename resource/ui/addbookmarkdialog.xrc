@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resource version="2.4.0.1">
+
+  <object class="wxDialog" name="addbookmark_dialog">
+	<title>Add Bookmark</title>
+	
+    <object class="wxFlexGridSizer">
+      <cols>2</cols>
+      <rows>3</rows>
+      <hgap>5</hgap>
+      <vgap>5</vgap>
+      
+      <!-- Bookmark Character -->
+      <object class="sizeritem">
+		<object class="wxStaticText">
+			<label>Slot:</label>
+		</object>
+		<flag>wxALIGN_RIGHT|wxALIGN_CENTER_VERTICAL</flag>
+      </object>
+      
+      <object class="sizeritem">
+		<flag>wxGROW</flag>
+        <object class="wxComboBox" name="addbookmark_slot">
+			<style>wxCB_READONLY</style>
+		</object>
+      </object>
+      
+	<!-- Bookmark Description -->
+      <object class="sizeritem">
+		<object class="wxStaticText">
+			<label>Description:</label>
+		</object>
+		<flag>wxALIGN_RIGHT|wxALIGN_CENTER_VERTICAL</flag>
+      </object>
+
+      <object class="sizeritem">
+        <flag>wxALIGN_CENTER|wxGROW</flag>
+		<object class="wxTextCtrl" name="addbookmark_description"/>
+      </object>
+	
+      <!-- Buttons -->
+      <object class="sizeritem">
+		<flag>wxGROW</flag>
+		<object class="wxButton" name="addbookmark_ok">
+			<label>Add</label>
+		</object>
+		<flag>wxALIGN_CENTER</flag>
+      </object>
+      
+      <object class="sizeritem">
+		<flag>wxGROW</flag>
+		<object class="wxButton" name="addbookmark_cancel">
+			<label>Cancel</label>
+		</object>
+		<flag>wxALIGN_CENTER</flag>
+      </object>            
+      
+    </object>    
+  </object>
+</resource>
+

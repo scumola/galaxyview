@@ -1,0 +1,37 @@
+AC_INIT([GalaxyView], [3.00], [kenw@quarter-flash.com])
+AM_INIT_AUTOMAKE
+
+CXXFLAGS="-g"
+CFLAGS="-g"
+AC_PROG_CXX
+AC_PROG_CC
+AC_PROG_CPP
+
+AC_CHECK_LIB([pthread], [pthread_attr_init], , AC_MSG_ERROR([pthread not found]))
+AC_CHECK_LIB([sqlite], [sqlite_open], , AC_MSG_ERROR([sqlite not found]))
+
+dnl TODO Check if xrc library exists
+
+AM_OPTIONS_WXCONFIG
+AM_PATH_WXCONFIG(2.4.0, WXFOUND=1)
+
+if test "$WXFOUND" != 1; then
+    AC_MSG_ERROR([
+        Please check that wx-config is in path, the directory
+        where wxWindows libraries are installed (returned by
+        'wx-config --libs' command) is in LD_LIBRARY_PATH or
+        equivalent variable and wxWindows is version 2.4.0 or above.
+    ])
+fi
+
+AC_ARG_WITH(png, [  --with-png		includes -lpng into the link process], 
+		USE_PNG="-lpng", USE_PNG="")
+
+CXXFLAGS="$WX_CXXFLAGS $CXXFLAGS"
+LIBS="$LIBS $WX_LIBS $USE_PNG"
+
+dnl Add XRC Library
+LIBS="$LIBS -l`wx-config --basename`_xrc-`wx-config --release`"
+
+AC_OUTPUT([Makefile])
+

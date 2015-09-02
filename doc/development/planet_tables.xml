@@ -1,0 +1,79 @@
+<?xml version="1.0" standalone="yes"?>
+
+<!-- the first two describe the same table, just using a different
+     syntax. The question is, which is better?
+
+     the first has the advantage of being easily extendable. ie, if
+     other attributes of a column need to be added they are easy to
+     accomodate without having the line length get unweildy.
+
+     the second is much more compact, but does suffer from readability
+     with extension of current syntax. -->
+<tables>
+   <table name="planet_main">
+      <column>
+         <name>id</name>
+         <type>integer</type>
+         <options>primary key</options>
+      </column>
+      <column>
+         <name>x</name>
+         <type>float</type>
+      </column>
+      <column>
+         <name>y</name>
+         <type>float</type>
+      </column>
+      <column>
+         <name>size</name>
+         <type>float</type>
+      </column>
+      <column>
+         <name>resources</name>
+         <type>float</type>
+      </column>
+   </table>
+
+   <table>
+      <column name="id" type="integer" options="primary key"/>
+      <column name="x" type="float"/>
+      <column name="y" type="float"/>
+      <column name="size" type="float"/>
+      <column name="resources" type="float"/>
+   </table>
+
+   <table name="planet_data">
+      <column name="id" type="integer"/>
+      <column name="name" type="varchar" length="256"/>
+      <column name="username" type="varchar" length="256" variant="blind"/>
+      <column name="turn" type="integer"/>
+      <column name="owner_id" type="integer"/>
+      <column name="last_owner_id" type="integer"/>
+      <column name="producing" type="integer"/>
+      <column name="intel_src" type="integer"/>
+      <column name="population" type="float"/>
+      <column name="industry" type="float"/>
+      <column name="CAP" type="float"/>
+      <column name="MAT" type="float"/>
+      <column name="COL" type="float"/>
+   </table>
+
+   <index name="planet_main_id">
+      <table>planet_main</table>
+      <column order="1">id</column>
+   </index>
+
+   <index name="planet_data_id">
+      <table>planet_data</table>
+      <column order="1">id</column>
+   </index>
+
+   <index name="planet_data_producing">
+      <table>planet_data</table>
+      <column order="1">producing</column>
+   </index>
+</tables>
+
+
+
+

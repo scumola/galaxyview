@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE gv_relation SYSTEM "gv_tables.dtd">
+
+<gv_relation>
+   <table name="planet_main">
+      <column>
+         <name>id</name>
+         <integer/>
+         <options>primary key</options>
+      </column>
+      <column>
+         <name>x</name>
+         <float/>
+      </column>
+      <column>
+         <name>y</name>
+         <float/>
+      </column>
+      <column>
+         <name>size</name>
+         <float/>
+      </column>
+      <column>
+         <name>resources</name>
+         <float/>
+      </column>
+
+      <index name="id">
+         <col_name sequence="1">id</col_name>
+      </index>
+   </table>
+
+   <table name="planet_data">
+      <column>
+         <name>id</name>
+	 <integer/>
+      </column>
+      <column>
+         <name>name</name>
+	 <varchar size="256"/>
+      </column>
+      <column>
+         <name>username</name>
+	 <varchar size="256"/>
+	 <variant>blind</variant>
+      </column>
+      <column>
+         <name>turn</name>
+	 <integer/>
+      </column>
+      <column>
+         <name>owner_id</name>
+	 <integer/>
+      </column>
+      <column>
+         <name>last_owner_id</name>
+	 <integer/>
+      </column>
+      <column>
+         <name>producing</name>
+	 <integer/>
+      </column>
+      <column>
+         <name>intel_src</name>
+	 <integer/>
+      </column>
+      <column>
+         <name>population</name>
+	 <float/>
+      </column>
+      <column>
+         <name>industry</name>
+	 <float/>
+      </column>
+      <column>
+         <name>CAP</name>
+	 <float/>
+      </column>
+      <column>
+         <name>MAT</name>
+	 <float/>
+      </column>
+      <column>
+         <name>COL</name>
+	 <float/>
+      </column>
+
+      <index name="id">
+         <col_name sequence="1">id</col_name>
+      </index>
+
+      <index name="producing">
+         <col_name sequence="1">producing</col_name>
+      </index>
+   </table>
+
+</gv_relation>
+
+
+
+

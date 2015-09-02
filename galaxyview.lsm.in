@@ -1,0 +1,22 @@
+Begin3
+Title:		galaxyview
+Version:	@VERSION@
+Entered-date:	@ISODATE@
+Description:	Graphical turn viewer for the PbEM game Galaxy
+		@configure_input@
+		This is the first version of GalaxyView that is written
+		based on GPLd code by the original author, Roland Scholz.
+
+		This program is based on wxWindows and MetaKit, required
+		packages if you plan on modifying the code
+Keywords:	Galaxy, Play by Email, Turn Viewer
+Author: 	kenw@quarter-flash.com (Kenneth D. Weinert)
+Maintained-by:	kenw@quarter-flash.com (Kenneth D. Weinert)
+Primary-site:	galaxyview.sourceforge.com
+		31k galaxyview-@VERSION@.tar.gz
+		500  galaxyview.lsm
+Alternate-site: 
+Original-site:  
+Platforms:      Linux, Win32
+Copying-policy:	GNU copyleft
+End

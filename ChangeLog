@@ -1,0 +1,122 @@
+2003-08-25 Fabio Rossetto <redhook at users.sourceforge.net>
+
+	* Finished the first version of the Preferences Dialog
+
+2003-08-19 Fabio Rossetto <redhook at users.sourceforge.net>
+	
+	* added a Preferences Dialog
+	* galaxyview will exit now at the start, if it doesnt find the resourcefile (avoids some crashes)
+
+2003-02-19  Kenneth D. Weinert  <madcoder42 at users.sourceforge.net>
+
+	* galaxyview: initial C++ version.
+
+2003-06-17 Kenneth D. Weinert <madcoder42 at users.sourceforge.net>
+
+	* added VC++ workspace and project files
+	* menus in beta state, app layout in beta state
+	* Initial game database initialization code available
+	* Initial game configuration code available
+
+
+2003-06-19 Raphael Juchli <hellcat0 at users.sourceforge.net>
+
+	* added GVOpenGameDialog + resource files
+	* added basic Open Game Logic
+	* added Visual Studio .NET (7) solution and project files
+	
+
+2003-06-20 Raphael Juchli <hellcat0 at users.sourceforge.net>
+
+	* added GVNewGameDialog + resource files (logic not comlete yet)
+	
+2003-06-23 Raphael Juchli <hellcat0 at users.sourceforge.net>
+
+	* New Game/Load Game: fixed crash on Linux/GTK 
+	* New Game needs a directory and a name now
+	
+2003-06-25 Raphael Juchli <hellcat0 at users.sourceforge.net>
+
+	* New Game: last used turn directory is saved in the ini file
+	* Autoload of CurrentGame/Last Open Game
+	
+2003-06-26 Raphael Juchli <hellcat0 at users.sourceforge.net>
+
+	* added temporary map to show how galaxyview should work 
+	
+2003-06-27 Raphael Juchli <hellcat0 at users.sourceforge.net>
+
+	* added function to get database by gamename
+	* GVdb now can lookup database handles by gamename
+	
+2003-06-28 Raphael Juchli <hellcat0 at users.sourceforge.net>
+
+	* fixed a bug in GVdb(GetbyName())
+	* Implemented NewGame, LoadGame of GVFrame, only needs DBInit code now
+	* changed /GalaxyView/games to /GalaxyView/Games
+
+2003-06-28 Ken Weinert <madcoder42 at users.sourceforge.net>
+	
+	* added setError() function to GVError
+	* getErrorMessage() has a default arguement that will return
+	  message from last error set
+
+2003-07-02 Raphael Juchli <hellcat0 at users.sourceforge.net>
+
+	* fixed memory leaks
+	* turn directory is now $GameDir/$GameName
+	
+2003-07-09 Raphael Juchli <hellcat0 at users.sourceforge.net>
+
+	* did some work on Report Parsing: stores bulletins in database now, no checking for turn number, etc
+	* report parser stores options per turn
+	* added new helper classes for report parsing
+
+2003-07-12 Raphael Juchli <hellcat0 at users.sourceforge.net>
+
+	* added simple html help browser
+	
+2003-07-25 Raphael Juchli <hellcat0 at users.sourceforge.net>
+
+	* added some more sql
+	* fixed a small bug in the about box
+	* added New Game button to open game dialog for special use
+	* fixed some memory leaks in DBInit, there are still some more in DBInit but i blame wxWindows for now :)
+	
+
+2003-07-30 Raphael Juchli <hellcat0 at users.sourceforge.net>
+
+	* added some core data objects(GVGalaxy, GVPlanet, GVGroup)
+	
+2003-08-06 Raphael Juchli <hellcat0 at users.sourceforge.net>
+
+	* updated core object definitions
+	* added map rendering (planets only for now)
+	
+2003-08-11 Raphael Juchli <hellcat0 at users.sourceforge.net>
+
+	* added icons to the tool tabs
+	
+2003-08-12 Raphael Juchli <hellcat0 at users.sourceforge.net>
+
+	* added negative coordinates system 
+	* map is working again
+	* scrollbars should work too
+	* still a lot more work to do on the map
+	* if there is a planet without turn data just create a empty planet with x,y coordinates only
+	
+2003-08-14 Raphael Juchli <hellcat0 at users.sourceforge.net>
+
+	* changed map rendering code
+	* should be a bit faster now
+
+2003-08-18 Raphael Juchli <hellcat0 at users.sourceforge.net>
+
+	* fixed the zoom code
+	* mapped the map zoom in/out menu items to map zoom function	
+
+2003-10-01 Raphael Juchli <hellcat0 at users.sourceforge.net>
+
+	* report parsing works for now
+	* added basic information panel view
+	* lots of other updates because i forgot to write the changelog once in a while :)

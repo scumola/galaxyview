@@ -1,0 +1,76 @@
+Coding Conventions
+------------------
+
+Files
+
+- File comments
+- use template for file that has description, copyright, license --
+  both source and header files 
+
+Classes
+
+- Classes directly for GalaxyView have a prefix GV
+- Generic Classes have no prefix
+- DoxyGen comments, brief description of the class
+
+Methods
+
+- brief DoxyGen Comments for all class methods in the header files, 
+  for complicated methods additional documentation in the source files
+- Set/Get Methods can be implemented in the header files
+- Methods always start with a capital letter, every word starts with a 
+  capital letter too(ie. CreateNewGameDatabase() )
+
+	Constructors:
+
+		/** additional comments */
+		GVFrame::GVFrame()
+		: initlist(...)
+		{
+	
+		}
+
+	Methods:
+
+		/** additional comments */
+		bool
+		GVFrame::LoadGame(params...)
+		{
+			...
+		}
+
+Class Variables
+
+- All class variables have a prefix m_
+- descriptive names
+- short comment for all variables
+
+Local Variables
+
+- descriptive names, no int q,p,v, exception 'i' in loops iterators
+- all variables on a separate line
+
+	int drive;
+	int shield;
+	int cargo;
+
+If, While, For
+
+- both syntaxes can be used:
+
+	if(true) {
+		...
+	}
+
+	or 
+
+	if(true) 
+	{
+
+	}
+
+Indenting
+
+- all indents are by using tabs -- *no spaces*
+  this is because some editors can adjust the actual visible indent
+

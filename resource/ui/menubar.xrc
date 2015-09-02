@@ -1,0 +1,450 @@
+<?xml version="1.0" ?>
+<resource version="2.4.0.1">
+  <object class="wxMenuBar" name="main_menubar">
+    <style>wxMB_DOCKABLE</style>
+    <object class="wxMenu" name="file_menu">
+      <label>&amp;File</label>
+      <object class="wxMenuItem" name="game_load">
+        <label>Load Game...\tCtrl+L</label>
+      </object>
+      <object class="wxMenuItem" name="game_new">
+        <label>New Game...\tCtrl+N</label>
+      </object>
+      <object class="wxMenuItem" name="game_edit">
+        <label>Edit Game...</label>
+      </object>
+      <object class="separator"/>
+      <object class="wxMenuItem" name="preferences">
+        <label>Preferences...</label>
+      </object>
+      <object class="separator"/>
+      <object class="wxMenuItem" name="exit">
+        <label>Exit\tCtrl+Q</label>
+      </object>
+    </object>
+    
+    <object class="wxMenu" name="report_menu">
+		<label>&amp;Report</label>
+		<object class="wxMenuItem" name="report_loadfile">
+			<label>Load File...</label>
+		</object>
+		<object class="wxMenuItem" name="report_loaddir">
+			<label>Load From Directory...</label>
+		</object>
+    </object>
+
+    <object class="wxMenu" name="turn_menu">
+      <label>&amp;Turn</label>
+      <object class="wxMenuItem" name="turn_back_ten">
+        <bitmap>../buttons/turn_back_ten.png</bitmap>
+        <label>Back Ten</label>
+        <help>10 Turns Back</help>
+      </object>
+      <object class="wxMenuItem" name="turn_previous">
+        <bitmap>../buttons/turn_previous.png</bitmap>
+        <label>Previous</label>
+        <help>Move one turn back</help>
+      </object>
+      <object class="wxMenuItem" name="turn_next">
+        <bitmap>../buttons/turn_next.png</bitmap>
+        <label>Next</label>
+        <help>Next Turn</help>
+      </object>
+      <object class="wxMenuItem" name="turn_ahead_ten">
+        <bitmap>../buttons/turn_ahead_ten.png</bitmap>
+        <label>Ahead Ten</label>
+        <help>Ahead Ten</help>
+      </object>
+      <object class="separator"/>
+      <object class="wxMenuItem" name="turn_forecast">
+        <bitmap>../buttons/turn_forecast.png</bitmap>
+        <label>Forecast\tCtrl+F</label>
+      </object>
+      <object class="separator"/>
+      <object class="wxMenuItem" name="turn_overview">
+        <bitmap>../buttons/turn_overview.png</bitmap>
+        <label>Overview</label>
+      </object>
+      <object class="wxMenuItem" name="turn_report">
+        <bitmap>../buttons/turn_report.png</bitmap>
+        <label>Report</label>
+      </object>
+      <object class="separator"/>
+      <object class="wxMenuItem" name="turn_charts">
+        <bitmap>../buttons/turn_charts.png</bitmap>
+        <label>Charts</label>
+      </object>
+    </object>
+
+    <object class="wxMenu" name="tools_menu">
+      <label>&amp;Tools</label>
+      <object class="wxMenuItem" name="move_editor">
+        <bitmap>../buttons/move_editor.png</bitmap>
+        <label>Move Editor</label>
+        <help>Select Move Editor</help>
+      </object>
+      <object class="wxMenuItem" name="planet_developer">
+        <bitmap>../buttons/planet_developer.png</bitmap>
+        <label>Planet Developer</label>
+        <help>Select Planet Developer</help>
+      </object>
+      <object class="wxMenuItem" name="ship_designer">
+        <bitmap>../buttons/ship_designer.png</bitmap>
+        <label>Ship Designer</label>
+        <help>Select Ship Designer</help>
+      </object>
+      <object class="wxMenuItem" name="battle_simulator">
+        <bitmap>../buttons/battle_simulator.png</bitmap>
+        <label>Battle Simulator</label>
+        <help>Select Battle Simulator</help>
+      </object>
+      <object class="separator"/>
+      <object class="wxMenuItem" name="intel_center">
+        <bitmap>../buttons/intel_center.png</bitmap>
+        <label>Intel Center</label>
+        <help>Select Intel Center</help>
+      </object>
+      <object class="wxMenuItem" name="message_center">
+        <bitmap>../buttons/message_center.png</bitmap>
+        <label>Messages</label>
+        <help>Select Message Center</help>
+      </object>
+      <object class="wxMenuItem" name="treaty_editor">
+        <bitmap>../buttons/treaty_editor.png</bitmap>
+        <label>Treaty Editor</label>
+        <help>Select Treaty Editor</help>
+      </object>
+      <object class="separator"/>
+      <object class="wxMenuItem" name="text_editor">
+        <bitmap>../buttons/text_editor.png</bitmap>
+        <label>Text Editor</label>
+        <help>Select texteditor tool</help>
+      </object>
+      <object class="wxMenuItem" name="calculator">
+        <bitmap>../buttons/calculator.png</bitmap>
+        <label>Calculator</label>
+        <help>Select calculator tool</help>
+      </object>
+    </object>
+
+    <object class="wxMenu" name="map_menu">
+      <label>&amp;Map</label>
+      <object class="wxMenuItem" name="zoom_in">
+        <bitmap>../buttons/zoom_in.png</bitmap>
+        <label>Zoom In\tCtrl++</label>
+        <help>Zoom In</help>
+      </object>
+      <object class="wxMenuItem" name="zoom_out">
+        <bitmap>../buttons/zoom_out.png</bitmap>
+        <label>Zoom Out\tCtrl+-</label>
+        <help>Zoom Out</help>
+      </object>
+      <object class="wxMenuItem" name="zoom_mouse">
+        <bitmap>../buttons/zoom_mouse.png</bitmap>
+        <checkable>1</checkable>
+        <label>Zoom on Mouse</label>
+      </object>
+      <object class="separator"/>
+      <object class="wxMenuItem" name="find_planet">
+        <bitmap>../buttons/find_planet.png</bitmap>
+        <label>Find Planet</label>
+      </object>
+      <object class="wxMenuItem" name="find_race">
+        <bitmap>../buttons/find_race.png</bitmap>
+        <label>Find Race</label>
+      </object>
+      <object class="separator"/>
+      <object class="wxMenuItem" name="map_print">
+        <bitmap>../buttons/map_print.png</bitmap>
+        <label>Print Map\tCtrl+P</label>
+      </object>
+      <object class="wxMenuItem" name="map_save">
+        <bitmap>../buttons/map_save.png</bitmap>
+        <label>Save Map</label>
+      </object>
+      <object class="separator"/>
+      <object class="wxMenuItem" name="play_film">
+        <bitmap>../buttons/play_film.png</bitmap>
+        <label>Play Film</label>
+      </object>
+    </object>
+    <object class="wxMenu" name="bookmarks_menu">
+      <label>&amp;Bookmarks</label>
+      <object class="wxMenuItem" name="bookmark_add">
+        <bitmap>../buttons/bookmark_add.png</bitmap>
+        <label>Add...\tCtrl+B</label>
+        <help>Adds current settings as a new bookmark</help>
+      </object>
+      <object class="wxMenuItem" name="bookmark_delete">
+        <bitmap>../buttons/bookmark_add.png</bitmap>
+        <label>Delete...</label>
+        <help>Delete Bookmarks</help>
+      </object>
+	  <object class="separator"/>
+	  <!-- 26 Bookmarks -->
+	  <object class="wxMenuItem" name="bookmark_A"/>
+      <object class="wxMenuItem" name="bookmark_B"/>
+      <object class="wxMenuItem" name="bookmark_C"/>
+      <object class="wxMenuItem" name="bookmark_D"/>
+      <object class="wxMenuItem" name="bookmark_E"/>
+      <object class="wxMenuItem" name="bookmark_F"/>
+      <object class="wxMenuItem" name="bookmark_G"/>
+      <object class="wxMenuItem" name="bookmark_H"/>
+      <object class="wxMenuItem" name="bookmark_I"/>
+      <object class="wxMenuItem" name="bookmark_J"/>
+      <object class="wxMenuItem" name="bookmark_K"/>
+      <object class="wxMenuItem" name="bookmark_L"/>
+      <object class="wxMenuItem" name="bookmark_M"/>
+      <object class="wxMenuItem" name="bookmark_N"/>
+      <object class="wxMenuItem" name="bookmark_O"/>
+      <object class="wxMenuItem" name="bookmark_P"/>
+      <object class="wxMenuItem" name="bookmark_Q"/>
+      <object class="wxMenuItem" name="bookmark_R"/>
+      <object class="wxMenuItem" name="bookmark_S"/>
+      <object class="wxMenuItem" name="bookmark_T"/>
+      <object class="wxMenuItem" name="bookmark_U"/>
+      <object class="wxMenuItem" name="bookmark_V"/>
+      <object class="wxMenuItem" name="bookmark_W"/>
+      <object class="wxMenuItem" name="bookmark_X"/>
+      <object class="wxMenuItem" name="bookmark_Y"/>
+      <object class="wxMenuItem" name="bookmark_Z"/>  
+	  <!-- end of bookmarks -->
+    </object>
+
+    <object class="wxMenu" name="show_menu">
+      <label>&amp;Show</label>
+      <object class="wxMenuItem" name="circles">
+        <bitmap>../buttons/circles.png</bitmap>
+        <checkable>1</checkable>
+        <label>Circles</label>
+      </object>
+      <object class="wxMenuItem" name="distance">
+        <bitmap>../buttons/distance.png</bitmap>
+        <checkable>1</checkable>
+        <label>Distance</label>
+      </object>
+      <object class="separator"/>
+      <object class="wxMenuItem" name="groups_planets">
+        <bitmap>../buttons/groups_planets.png</bitmap>
+        <checkable>1</checkable>
+        <label>Groups at Planets</label>
+      </object>
+      <object class="wxMenuItem" name="groups_hyperspace">
+        <bitmap>../buttons/groups_hyperspace.png</bitmap>
+        <checkable>1</checkable>
+        <label>Groups in Hyperspace</label>
+      </object>
+      <object class="separator"/>
+      <object class="wxMenuItem" name="groups_incoming">
+        <bitmap>../buttons/groups_incoming.png</bitmap>
+        <label>Incoming Groups</label>
+        <checkable>1</checkable>
+      </object>
+      <object class="wxMenuItem" name="groups_cap">
+        <bitmap>../buttons/groups_cap.png</bitmap>
+        <label>CAP Groups</label>
+        <checkable>1</checkable>
+      </object>
+      <object class="wxMenuItem" name="groups_col">
+        <bitmap>../buttons/groups_col.png</bitmap>
+        <label>COL Groups</label>
+        <checkable>1</checkable>
+      </object>
+      <object class="wxMenuItem" name="groups_mat">
+        <bitmap>../buttons/groups_mat.png</bitmap>
+        <label>MAT Groups</label>
+        <checkable>1</checkable>
+      </object>
+      <object class="wxMenuItem" name="groups_emp">
+        <bitmap>../buttons/groups_emp.png</bitmap>
+        <label>EMP Groups</label>
+        <checkable>1</checkable>
+      </object>
+      <object class="wxMenuItem" name="groups_other">
+        <bitmap>../buttons/groups_other.png</bitmap>
+        <label>Other Groups</label>
+        <checkable>1</checkable>
+      </object>
+      <object class="wxMenuItem" name="groups_selected">
+        <bitmap>../buttons/groups_selected.png</bitmap>
+        <label>Selected Groups</label>
+        <checkable>1</checkable>
+      </object>
+      <object class="separator"/>
+      <object class="wxMenuItem" name="route_cap">
+        <bitmap>../buttons/route_cap.png</bitmap>
+        <checkable>1</checkable>
+        <label>CAP Routes</label>
+      </object>
+      <object class="wxMenuItem" name="route_col">
+        <bitmap>../buttons/route_col.png</bitmap>
+        <checkable>1</checkable>
+        <label>COL Routes</label>
+      </object>
+      <object class="wxMenuItem" name="route_mat">
+        <bitmap>../buttons/route_mat.png</bitmap>
+        <checkable>1</checkable>
+        <label>MAT Routes</label>
+      </object>
+      <object class="wxMenuItem" name="route_emp">
+        <bitmap>../buttons/route_emp.png</bitmap>
+        <checkable>1</checkable>
+        <label>EMP Routes</label>
+      </object>
+      <object class="separator"/>
+      <object class="wxMenuItem" name="battles">
+        <bitmap>../buttons/battles.png</bitmap>
+        <radio>1</radio>
+        <label>Battles</label>
+      </object>
+      <object class="wxMenuItem" name="battles_mass">
+        <bitmap>../buttons/battles_mass.png</bitmap>
+        <radio>1</radio>
+        <label>Battle Sizes</label>
+      </object>
+      <object class="wxMenuItem" name="bombings">
+        <bitmap>../buttons/bombings.png</bitmap>
+        <radio>1</radio>
+        <label>Bombings</label>
+      </object>
+      <object class="wxMenuItem" name="bombings_size">
+        <bitmap>../buttons/bombings_size.png</bitmap>
+        <radio>1</radio>
+        <label>Bombings Size</label>
+      </object>
+      <object class="wxMenuItem" name="groups">
+        <bitmap>../buttons/groups.png</bitmap>
+        <radio>1</radio>
+        <label>Groups</label>
+      </object>
+      <object class="wxMenuItem" name="groups_mass">
+        <bitmap>../buttons/groups_mass.png</bitmap>
+        <radio>1</radio>
+        <label>Groups Mass</label>
+      </object>
+      <object class="separator"/>
+      <object class="wxMenuItem" name="bar_graphs_group">
+        <bitmap>../buttons/bar_graphs_group.png</bitmap>
+        <radio>1</radio>
+        <label>Group Bar Graphs</label>
+      </object>
+      <object class="wxMenuItem" name="bar_graphs_planet">
+        <bitmap>../buttons/bar_graphs_planet.png</bitmap>
+        <radio>1</radio>
+        <label>Planet Bar Graphs</label>
+      </object>
+      <object class="separator"/>
+      <object class="wxMenuItem" name="planet_size">
+        <bitmap>../buttons/planet_size.png</bitmap>
+        <radio>1</radio>
+        <label>Planet Size</label>
+      </object>
+      <object class="wxMenuItem" name="planet_flags">
+        <bitmap>../buttons/planet_flags.png</bitmap>
+        <radio>1</radio>
+        <label>Planet Flags</label>
+      </object>
+      <object class="wxMenuItem" name="names_races">
+        <bitmap>../buttons/names_races.png</bitmap>
+        <checkable>1</checkable>
+        <label>Race Names</label>
+      </object>
+      <object class="wxMenuItem" name="names_planets">
+        <bitmap>../buttons/names_planets.png</bitmap>
+        <checkable>1</checkable>
+        <label>Planet Names</label>
+      </object>
+      <object class="separator"/>
+      <object class="wxMenuItem" name="borders">
+        <bitmap>../buttons/borders.png</bitmap>
+        <radio>1</radio>
+        <label>Border Agreements</label>
+      </object>
+      <object class="wxMenuItem" name="borders_named">
+        <bitmap>../buttons/borders_named.png</bitmap>
+        <radio>1</radio>
+        <label>Named Border Agreements</label>
+      </object>
+    </object>
+
+    <object class="wxMenu" name="tables_menu">
+      <label>&amp;Tables</label>
+      <object class="wxMenuItem" name="groups_tbl">
+        <bitmap>../buttons/groups_tbl.png</bitmap>
+        <label>Groups</label>
+      </object>
+      <object class="wxMenuItem" name="fleets_tbl">
+        <bitmap>../buttons/fleets_tbl.png</bitmap>
+        <label>Fleets</label>
+      </object>
+      <object class="wxMenuItem" name="incoming_tbl">
+        <bitmap>../buttons/incoming_tbl.png</bitmap>
+        <label>Incoming Groups</label>
+      </object>
+      <object class="wxMenuItem" name="ship_types_tbl">
+        <bitmap>../buttons/ship_types_tbl.png</bitmap>
+        <label>Ship Types</label>
+      </object>
+	  <object class="separator"/>
+      <object class="wxMenuItem" name="planets_tbl">
+        <bitmap>../buttons/planets_tbl.png</bitmap>
+        <label>Planets</label>
+      </object>
+      <object class="wxMenuItem" name="production_tbl">
+        <bitmap>../buttons/production_tbl.png</bitmap>
+        <label>Ships in Production</label>
+      </object>
+      <object class="wxMenuItem" name="stockpiles_tbl">
+        <bitmap>../buttons/stockpiles_tbl.png</bitmap>
+        <label>Stockpiles</label>
+      </object>
+      <object class="wxMenuItem" name="routes_tbl">
+        <bitmap>../buttons/routes_tbl.png</bitmap>
+        <label>Routes</label>
+      </object>	  
+      <object class="wxMenuItem" name="races_tbl">
+        <bitmap>../buttons/races_tbl.png</bitmap>
+        <label>Races</label>
+      </object>	  
+      <object class="wxMenuItem" name="battles_tbl">
+        <bitmap>../buttons/battles_tbl.png</bitmap>
+        <label>Battles</label>
+      </object>	  
+      <object class="wxMenuItem" name="bombings_tbl">
+        <bitmap>../buttons/bombings_tbl.png</bitmap>
+        <label>Bombings</label>
+      </object>
+    </object>
+	
+    <object class="wxMenu" name="help_menu">
+      <label>&amp;Help</label>
+      <object class="wxMenuItem" name="help_contents">
+        <label>Contents and Introduction</label>
+      </object>
+      <object class="wxMenuItem" name="help_file">
+        <label>File</label>
+      </object>
+      <object class="wxMenuItem" name="help_turn">
+        <label>Turn</label>
+      </object>
+      <object class="wxMenuItem" name="help_tools">
+        <label>Tools</label>
+      </object>
+      <object class="wxMenuItem" name="help_map">
+        <label>Display</label>
+      </object>
+      <object class="wxMenuItem" name="help_bookmarks">
+        <label>Bookmarks</label>
+      </object>
+      <object class="wxMenuItem" name="help_show">
+        <label>Show</label>
+      </object>
+      <object class="wxMenuItem" name="help_tables">
+        <label>Tables</label>
+      </object>
+      <object class="wxMenuItem" name="help_about">
+        <label>About</label>
+      </object>
+    </object>
+  </object>
+</resource>

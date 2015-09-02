@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE gv_relation SYSTEM "gv_tables.dtd">
+
+<gv_relation>
+  <table name="shiptype">
+    <column>
+      <name>name</name>
+      <varchar size="256"/>
+    </column>
+    <column>
+      <name>origin</name>
+      <varchar size="256"/>
+    </column>
+    <column>
+      <name>drive</name>
+      <float/>
+      <default>0</default>
+      <constraints>
+        <allow>0</allow>
+        <minimum>1.0</minimum>
+      </constraints>
+    </column>
+    <column>
+      <name>attacks</name>
+      <integer/>
+      <constraints>
+        <minimum>0</minimum>
+      </constraints>
+    </column>
+    <column>
+      <name>weapons</name>
+      <float/>
+      <default>0</default>
+      <constraints>
+	<allow>0</allow>
+        <minimum>1.0</minimum>
+      </constraints>
+    </column>
+    <column>
+      <name>shields</name>
+      <float/>
+      <default>0</default>
+      <constraints>
+        <allow>0</allow>
+        <minimum>1.0</minimum>
+      </constraints>
+    </column>
+    <column>
+      <name>cargo</name>
+      <float/>
+      <default>0</default>
+      <constraints>
+        <allow>0</allow>
+        <minimum>1.0</minimum>
+      </constraints>
+    </column>
+    <column>
+      <name>class</name>
+      <varchar size="256" />
+    </column>
+    <column>
+      <name>comment</name>
+      <varchar size="256"/>
+    </column>
+    <column>
+      <name>priority</name>
+      <integer/>
+    </column>
+    <!-- NOTE: software will put idx_<tablename>_ as prefix if the
+         name doesn't start with idx_ -->
+    <index name="name">
+      <col_name sequence="1">name</col_name>
+    </index>
+  </table>
+</gv_relation>

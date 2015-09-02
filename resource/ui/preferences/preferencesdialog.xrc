@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resource version="2.4.0.1">
+  <object class="wxDialog" name="preferences_dialog">
+    <title>Preferences</title>
+    <style/>
+    <exstyle/>
+    <size>500,300</size>
+    <object class="wxNotebook" name="preferences_notebook">
+      <style/>
+      <pos>4,4</pos>
+      <size>-1,-1</size>
+    </object>
+    <object class="wxButton" name="wxID_OK">
+      <label>&amp;Ok</label>
+      <pos>72,265</pos>
+      <size>72,-1</size>
+    </object>
+    <object class="wxButton" name="wxID_CANCEL">
+      <label>&amp;Cancel</label>
+      <default>0</default>
+      <size>72,-1</size>
+      <pos>164,265</pos>
+    </object>
+    <object class="wxButton" name="preferences_apply">
+      <label>&amp;Apply</label>
+      <default>0</default>
+      <size>72,-1</size>
+      <pos>256,265</pos>
+    </object>
+  </object>
+</resource>

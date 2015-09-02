@@ -1,0 +1,180 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resource version="2.4.0.1">
+
+  <object class="wxDialog" name="newgame_dialog">
+	<title>New Game</title>
+	
+    <object class="wxFlexGridSizer">
+      <cols>2</cols>
+      <rows>8</rows>
+      <hgap>5</hgap>
+      <vgap>5</vgap>
+      
+      <!-- Game Name -->
+      <object class="sizeritem">
+		<object class="wxStaticText">
+			<label>Game Name:</label>
+		</object>
+		<flag>wxALIGN_RIGHT|wxALIGN_CENTER_VERTICAL</flag>
+      </object>
+      
+      <object class="sizeritem">
+		<flag>wxGROW</flag>
+        <object class="wxTextCtrl" name="newgame_name"/>		
+      </object>
+      
+	<!-- Default Game Directory -->
+      <object class="sizeritem">
+		<object class="wxStaticText">
+			<label>Default Game Directory:</label>
+		</object>
+		<flag>wxALIGN_RIGHT|wxALIGN_CENTER_VERTICAL</flag>
+      </object>
+
+      <object class="sizeritem">
+                <flag>wxGROW</flag>
+                <object class="wxFlexGridSizer">
+                        <cols>2</cols>
+                        <rows>1</rows>
+                        <growablecols>0</growablecols>
+                                                                                                                       
+                        <orient>wxHORIZONTAL</orient>
+                        <object class="sizeritem">
+                                <flag>wxALIGN_CENTER|wxGROW</flag>
+                                <object class="wxTextCtrl" name="newgame_gamedirectory">
+                                </object>
+                        </object>
+                        <object class="sizeritem">
+                                <flag>wxRIGHT</flag>
+                                <object class="wxButton" name="newgame_gamedirectory_browse">
+                                        <size>30,-1</size>
+                                        <label>...</label>
+                                </object>
+                        </object>
+		</object>
+      </object>
+
+	  <!-- Type of game -->
+      <object class="sizeritem">
+		<object class="wxStaticText">
+			<label>Type of Game:</label>
+		</object>
+		<flag>wxALIGN_RIGHT|wxALIGN_CENTER_VERTICAL</flag>
+      </object>
+      
+      <object class="sizeritem">
+      	<flag>wxGROW</flag>
+		<object class="wxComboBox" name="newgame_type">
+			<style>wxCB_READONLY</style>
+			<selection>0</selection>
+			<content>
+				<item>Galaxy Standard</item>
+				<item>BlindGalaxy</item>
+				<item>GalaxyNG</item>
+				<item>Galaxy Explorer</item>
+				<item>GalaxyPlus</item>
+			</content>
+		</object>
+	  </object>
+      
+      <!-- Homeworld distribution: -->
+      <object class="sizeritem">
+		<object class="wxStaticText">
+			<label>Homeworld distribution:</label>
+		</object>
+		<flag>wxALIGN_RIGHT|wxALIGN_CENTER_VERTICAL</flag>		
+      </object>
+      
+      <object class="spacer"/>
+      
+      <!-- All players start with same number of homeworlds: (CheckBox) -->
+      <object class="spacer"/>
+      
+      <object class="sizeritem">
+        <object class="wxCheckBox" name="newgame_samehomes">
+		  <label>All players start with same number of homeworlds</label>
+          <value>1</value>
+        </object>
+      </object>      
+      
+      <!-- default turn directory -->
+      <object class="sizeritem">
+		<object class="wxStaticText">
+			<label>Default Turn Directory:</label>
+		</object>
+      </object>
+
+      <object class="sizeritem">
+                <flag>wxGROW</flag>
+                <object class="wxFlexGridSizer">
+                        <cols>2</cols>
+                        <rows>1</rows>
+                        <growablecols>0</growablecols>
+                                                                                                                       
+                        <orient>wxHORIZONTAL</orient>
+                        <object class="sizeritem">
+                                <flag>wxALIGN_CENTER|wxGROW</flag>
+                                <object class="wxTextCtrl" name="newgame_turndirectory">
+                                </object>
+                        </object>
+                        <object class="sizeritem">
+                                <flag>wxRIGHT</flag>
+                                <object class="wxButton" name="newgame_turndirectory_browse">
+                                        <size>30,-1</size>
+                                        <label>...</label>
+                                </object>
+                        </object>
+        </object>
+      </object>
+      
+      <!-- Turn 0 -->
+      <object class="sizeritem">
+		<object class="wxStaticText">
+			<label>Turn 0 Report:</label>
+		</object>
+	  </object>
+	  
+      <object class="sizeritem">
+		<flag>wxGROW</flag>		
+		<object class="wxFlexGridSizer">
+			<cols>2</cols>
+			<rows>1</rows>
+			<growablecols>0</growablecols>		
+				
+			<orient>wxHORIZONTAL</orient>
+			<object class="sizeritem">
+				<flag>wxALIGN_CENTER|wxGROW</flag>
+				<object class="wxTextCtrl" name="newgame_turn0">
+				</object>
+			</object>
+			<object class="sizeritem">
+				<flag>wxRIGHT</flag>
+				<object class="wxButton" name="newgame_turn0_browse">
+					<size>30,-1</size>
+					<label>...</label>
+				</object>
+			</object>			
+        </object>        
+      </object>
+		
+      <!-- Buttons -->
+      <object class="sizeritem">
+		<flag>wxGROW</flag>
+		<object class="wxButton" name="newgame_ok">
+			<label>Create</label>
+		</object>
+		<flag>wxALIGN_CENTER</flag>
+      </object>
+      
+      <object class="sizeritem">
+		<flag>wxGROW</flag>
+		<object class="wxButton" name="newgame_cancel">
+			<label>Cancel</label>
+		</object>
+		<flag>wxALIGN_CENTER</flag>
+      </object>            
+      
+    </object>    
+  </object>
+</resource>
+

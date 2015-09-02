@@ -1,0 +1,54 @@
+<!--=======================================================================-->
+<!--                GalaxyNG SQL Tables DTD version 1.0                    -->
+<!--=======================================================================-->
+
+
+<!-- Root level -->
+
+<!ELEMENT	gv_relation	(table)+>
+
+<!-- Table level -->
+
+<!ELEMENT	table		(column+, index+)>
+<!ATTLIST       table
+           name  ID             #REQUIRED>
+
+<!ELEMENT	column		(name,(varchar|integer|float),
+                                 variant?,options?,default?,constraints?)>
+
+<!ELEMENT	name    	(#PCDATA)>
+
+<!ELEMENT	varchar		EMPTY>
+<!ATTLIST       varchar
+           size CDATA           #REQUIRED>
+
+<!ELEMENT       integer         EMPTY>
+<!ELEMENT       float           EMPTY>
+
+<!ELEMENT	default		(#PCDATA)>
+
+<!ELEMENT       variant         (#PCDATA)>
+<!ELEMENT       options         (#PCDATA)>
+
+<!ELEMENT	constraints	(minimum|maximum|allow)*>
+<!ELEMENT       minimum         (#PCDATA)>
+<!ATTLIST       minimum
+                type            (inclusive|exclusive) "inclusive">
+<!ELEMENT       maximum          (#PCDATA)>
+<!ATTLIST       maximum
+                type            (inclusive|exclusive) "inclusive">
+<!ELEMENT       allow           (#PCDATA)>
+
+<!ELEMENT	index	        (col_name+)>
+<!ATTLIST       index
+           name CDATA           #REQUIRED>
+
+<!ELEMENT       col_name        (#PCDATA)>
+<!ATTLIST       col_name
+           sequence CDATA       #IMPLIED>
+
+
+
+<!--=======================================================================-->
+<!--                              The END                                  -->
+<!--=======================================================================-->

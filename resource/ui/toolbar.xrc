@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resource version="2.4.0.1">
+  <object class="wxToolBar" name="main_toolbar">
+    <object class="tool" name="toolbar_10back">
+      <bitmap>../buttons/turn_back_ten.png</bitmap>
+      <toggle>0</toggle>
+      <tooltip>10 Turns Back</tooltip>
+    </object>
+    <object class="tool" name="toolbar_back">
+      <bitmap>../buttons/turn_previous.png</bitmap>
+      <tooltip>Move one turn back</tooltip>
+      <toggle>0</toggle>
+    </object>
+    <object class="tool" name="toolbar_forward">
+      <bitmap>../buttons/turn_next.png</bitmap>
+      <tooltip>Next Turn</tooltip>
+      <toggle>0</toggle>
+    </object>
+    <object class="tool" name="toolbar_10forward">
+      <bitmap>../buttons/turn_ahead_ten.png</bitmap>
+      <toggle>0</toggle>
+    </object>
+    <size>-1,-1</size>
+    <object class="separator"/>
+    <object class="tool" name="toolbar_zoom_out">
+      <bitmap>../buttons/zoom_out.png</bitmap>
+      <toggle>0</toggle>
+      <tooltip>Zoom Out</tooltip>
+      <longhelp>Get a bigger overview of the map</longhelp>
+    </object>
+    <object class="tool" name="toolbar_zoom_in">
+      <bitmap>../buttons/zoom_in.png</bitmap>
+      <toggle>0</toggle>
+      <tooltip>Zoom In</tooltip>
+      <longhelp>Get a closer look at a region of the map</longhelp>
+    </object>
+    <object class="tool" name="toolbar_lupe">
+      <bitmap>../buttons/zoom_mouse.png</bitmap>
+      <toggle>0</toggle>
+      <tooltip>Zoom around mouse</tooltip>
+      <longhelp>Zoom from where the mouse is at</longhelp>
+    </object>
+    <object class="separator"/>
+    <!-- NOT NEEDED
+	<object class="tool" name="planets">
+	  <bitmap>../buttons/planets.png</bitmap>
+	  <tooltip>Planet View...</tooltip>
+	  <help>Show information on the planet you click on</help>
+	</object>
+	<object class="tool" name="ships">
+	  <bitmap>../buttons/ships.png</bitmap>
+	  <tooltip>Ship Design...</tooltip>
+	  <help>Design a new ship or modify an existing one</help>
+	</object>
+	<object class="tool" name="move">
+	  <bitmap>../buttons/move.png</bitmap>
+	  <tooltip>Move editor...</tooltip>
+	  <help>Show the move editor dialog</help>
+	</object>
+	<object class="tool" name="battle">
+	  <bitmap>../buttons/battle.png</bitmap>
+	  <tooltip>Battle Simulator...</tooltip>
+	  <help>Try to predict the outcome of a battle</help>
+	</object>
+	<object class="tool" name="borders2">
+	  <bitmap>../buttons/borders2.png</bitmap>
+	  <tooltip>Manage Border Agreements</tooltip>
+	  <help>Create or modify border agreements</help>
+	</object>
+	<object class="tool" name="textedit">
+	  <bitmap>../buttons/textedit.png</bitmap>
+	  <tooltip>Text Editor</tooltip>
+	  <help>Edit some text</help>
+	</object>
+	<object class="tool" name="calc">
+	  <bitmap>../buttons/calc.png</bitmap>
+	  <tooltip>bring up a calculator</tooltip>
+	  <help>show a calculator</help>
+	</object>	
+	-->
+	<object class="tool" name="toolbar_playfilm">
+	  <bitmap>../buttons/play_film.png</bitmap>
+	  <tooltip>Play all reports like a film</tooltip>
+	  <help>See how the galaxy evolved</help>
+	</object>
+	<!-- NEEDS CONVERTING
+	<object class="separator"/>
+	<object class="tool" name="races">
+	  <bitmap>../buttons/races.png</bitmap>
+	  <tooltip>show races...</tooltip>
+	  <help>Show all the participants in the galaxy</help>
+	</object>
+	<object class="tool" name="planetv">
+	  <bitmap>../buttons/planetv.png</bitmap>
+	  <tooltip>Show planets...</tooltip>
+	  <help>Show all the planets (by user or complete list)</help>
+	</object>
+	<object class="tool" name="messages">
+	  <bitmap>../buttons/messages.png</bitmap>
+	  <tooltip>Show News...</tooltip>
+	  <help>page through the news of the galaxy</help>
+	</object>
+	<object class="tool" name="chart">
+	  <bitmap>../buttons/chart.png</bitmap>
+	  <tooltip>show chart...</tooltip>
+	  <help>See graphical comparisons</help>
+	</object>
+	<object class="tool" name="forecast">
+	  <bitmap>../buttons/forecast.png</bitmap>
+	  <tooltip>show forecast...</tooltip>
+	  <help>see what might happen</help>
+	</object>
+	<object class="tool" name="history">
+	  <bitmap>../buttons/history.png</bitmap>
+	  <tooltip>show history...</tooltip>
+	  <help>see who you met, when</help>
+	</object>
+	<object class="tool" name="info">
+	  <bitmap>../buttons/info.png</bitmap>
+	  <tooltip>show turn overview</tooltip>
+	  <help>show turn overview</help>
+	</object>
+	<object class="tool" name="options">
+	  <bitmap>../buttons/options.png</bitmap>
+	  <tooltip>options</tooltip>
+	  <help>change options</help>
+	</object>        
+-->
+    <style>wxTB_FLAT</style>
+  </object>
+</resource>

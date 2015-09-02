@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resource version="2.4.0.1">
+ 
+	<object class="wxPanel" name="preferences_general_panel">
+		<size>265,250</size>
+		<style/>
+
+		<object class="wxFlexGridSizer">
+			<cols>1</cols>
+			<rows>2</rows>
+			<hgap>5</hgap>
+			<vgap>5</vgap>
+			<growablecols>0</growablecols>
+
+			<object class="sizeritem">
+				<flag>wxGROW</flag>
+			<object class="wxFlexGridSizer">
+				<cols>3</cols>
+				<rows>4</rows>
+				<hgap>5</hgap>
+				<vgap>5</vgap>
+		    <growablecols>1</growablecols>
+
+				<!-- Game Directory -->
+				<object class="sizeritem">
+					<object class="wxStaticText">
+						<label>Default Game Directory</label>
+					</object>
+					<flag>wxALIGN_RIGHT|wxALIGN_CENTER_VERTICAL</flag>
+				</object>
+
+				<object class="sizeritem">
+					<object class="wxTextCtrl" name="general_gamedirectory"/>
+					<flag>wxGROW</flag>
+				</object>
+
+				<object class="sizeritem">
+					<object class="wxButton" name="general_gamedirectory_button">
+						<size>30,-1</size>
+						<label>...</label>
+					</object>
+				</object>
+
+				<!-- Calculator Path -->
+				<object class="sizeritem">
+					<object class="wxStaticText">
+						<label>External Calculator Path:</label>
+					</object>
+					<flag>wxALIGN_RIGHT|wxALIGN_CENTER_VERTICAL</flag>
+				</object>
+
+				<object class="sizeritem">
+					<flag>wxGROW</flag>
+					<object class="wxTextCtrl" name="general_calculator_path"/>
+				</object>
+
+				<object class="sizeritem">
+					<object class="wxButton" name="general_calculator_path_button">
+						<size>30,-1</size>
+						<label>...</label>
+					</object>
+				</object>
+
+				<!-- Text Editor Path -->
+				<object class="sizeritem">
+					<object class="wxStaticText">
+						<label>External Text Editor Path:</label>
+					</object>
+					<flag>wxALIGN_RIGHT|wxALIGN_CENTER_VERTICAL</flag>
+				</object>
+
+				<object class="sizeritem">
+					<flag>wxGROW</flag>
+					<object class="wxTextCtrl" name="general_texteditor_path"/>
+				</object>
+
+				<object class="sizeritem">
+					<object class="wxButton" name="general_texteditor_path_button">
+						<size>30,-1</size>
+						<label>...</label>
+					</object>
+				</object>
+
+				<!-- Default Turn Path -->
+				<object class="sizeritem">
+					<object class="wxStaticText">
+						<label>Default Turn Path:</label>
+					</object>
+					<flag>wxALIGN_RIGHT|wxALIGN_CENTER_VERTICAL</flag>
+				</object>
+
+				<object class="sizeritem">
+					<flag>wxGROW</flag>
+					<object class="wxTextCtrl" name="general_turn_path"/>
+				</object>
+
+				<object class="sizeritem">
+					<object class="wxButton" name="general_turn_path_button">
+						<size>30,-1</size>
+						<label>...</label>
+					</object>
+				</object>
+			</object>
+			</object>			
+
+		</object>
+
+	</object>
+</resource>

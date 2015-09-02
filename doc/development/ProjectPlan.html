@@ -1,0 +1,332 @@
+<html>
+  <head>
+	<title>GalaxyView Project Plan</title>
+	<!-- css goes here -->
+  </head>
+  <body>
+	<h1>GalaxyView Project Plan</h1>
+	<h1>Purpose</h1>
+	<p>
+	  This project is designed to implement the functionality of the
+	  existing GalaxyView turn viewer. The current turn viewer is
+	  written in Delphi and is a Microsoft Windows only product
+	  (although it is usable to a large extent under Wine on Linux.)
+	</p>
+	<p>
+	  There are several goals set out in accomplishing the completion
+	  of this project:
+	  <ul>
+		<li>Fix outstanding bugs</li>
+		<li>Provide native applications on multiple platforms (at a
+		  minimum Windows and Linux)</li>
+		<li>Switch to XML reports to facilitate being usable with
+		  different Galaxy variants</li>
+	  </ul>
+	</p>
+	
+	<h1>Tools</h1>
+	<h2>wxWindows</h2>
+	<p>
+	  After searching the web for cross-platform GUI tools there were
+	  only two that were found that were really usable: <a
+		href="http://objectcentral.com/">v-gui</a>  and <a
+		href="http://wxWindows.org">wxWindows</a>
+	</p>
+	<p>
+	  wxWindows was chosen for one main reason: it has a native look and
+	  feel for the platforms it runs on. v-gui, while a good toolkit,
+	  has its own look and feel on every platform.
+	</p>
+	<p>
+	  Other reasons to like wxWindows is that it has an active
+	  developer community, the developers respond quickly to questions
+	  and concerns, they are continually improving the library, and
+	  they actively support open source, both in principle and
+	  inactuality.
+	</p>
+	<h1>User Interface</h1>
+	<h2>Appearance</h2>
+	<h3>Panes</h3>
+	<p>
+	  The application will present itself as a single top-level window
+	  with 3 panes. The panes will be adjustable in size, but it will
+	  not be possible to completely eliminate any of the panes,
+	  although its minimized size will be very small. The default
+	  application size will be the smaller of 1024x768 or the maximum
+	  size of the window. Due to the amount of data to be presented,
+	  application sizes less than 800x600 will have greatly reduced
+	  usability. 
+	</p>
+	<h4>Map</h4>
+	<p>
+	  The upper right pane will initially be approximately 1/4 of the
+	  window size. This pane is used to graphically display the state
+	  of the game for all elements that have graphical aspects.
+	</p>
+	<p>
+	  Originally the map pane should show the entire map, scaled to
+	  fit the avaliable pane size. Any existing bookmarks will
+	  override this default behaviour. There are 5 ways to cause the
+	  map to be redrawn to a different scale. One way changes the
+	  pane size - this is done by dragging the resize bars or changing
+	  the size of the application window. The map should be redrawn
+	  with the same extents, but rescaled to fit the available space. 
+	</p>
+	<p>
+	  The other changes are done with tool interactions. There are 3
+	  tools available through the menu - the zoom+ and zoom- which
+	  change the viewable area of the map by 10% of the map size, with
+	  a minimum size of 10% and a maximum size of 300%. This zooming
+	  is done about the current center of the map.
+	</p>
+	<p>
+	  There are several decorations that can be added to a map. These
+	  are available from the menu in addition to a popup menu when the
+	  map is right-clicked on. These decorations include: relative
+	  planet size, production, .....
+	</p>
+	<p>
+	  There is a zoom here function which will zoom in on a left click
+	  and zoom out on a right click, but the center of the map changes
+	  to be the point that was clicked on.
+	</p>
+	<p>
+	  The last method of changing the displayed map is to click on the
+	  map and drag out a square - this becomes the displayed area of
+	  the map. In the case of a rectangular area being selected, a
+	  square area will be shown with the size of the square being the
+	  size of the largest side of the rectangle.
+	</p>
+	<h4>Tools</h4>
+	<p>
+	  The remainder of the upper 1/2 of the application will be used
+	  for tools. This pane will consist of a tabbed notebook with each
+	  tool appearing on its own tab. Tools will be written as a
+	  plug-in. This allows us to more easily support different game
+	  variants as well as provide bug fixes without having to
+	  distribute the entire application.
+	</p>
+	<p>
+	  Investigation is under way to add the ability to implement a
+	  scripting language. If this option is incorporated, then the
+	  scripting language used will be one of the languages that also
+	  has a wxWindows interface. This will allow us to prototype
+	  features and recode them for speed (if necessary.) It also
+	  allows for extensibility of the viewer, to implement features
+	  that we haven't yet thought of or for specialized, user-specific
+	  needs.
+	</p>
+	<p>
+	  In addition, tools will be implimented via a plugin
+	  architecture. Each tool will be derived from the GVToolPlugin
+	  class. <br />
+		<pre>
+		  <code>
+			class GVToolPlugin {
+			  public:
+			    GVToolPlugin(wxPanel* panel);
+			    wxString& GetName(void) = 0;
+			    void Redraw(void) = 0;
+			    void Run(void) = 0;
+			}
+		  </code>
+		</pre>
+	</p>
+	<p>
+	  Tools will follow a naming convention in order to allow for
+	  controlling the order of loading of the plugins. This convention
+	  will be PXXXname. P is for plugin, XXX is a 3 digit number which
+	  will be for ordering, and name can be any name appropriate for
+	  the functionality. Unless there is a need for tightly coupling 
+	</p>
+	<p>
+	  <b>Message Center</b> The Message Center is used for sending and
+	  receiving both personal and global messages. There may be added
+	  functionality to use this panel for emailing (or otherwise
+	  contacting the server to send) orders to the server.
+	</p>
+	<p>
+	  <b>Move Editor</b> The Move Editor is the main interface for the
+	  user to create turn orders. This pane will have a list of valid
+	  orders to choose from, the ability to see orders either in short
+	  or extended form, the ability to set the player's race name,
+	  password, and real name, and orders email address. In addition
+	  there will be buttons to verify orders, auto-generate planet
+	  building, (what else?) 
+	</p>
+	<p>
+	  <b>Planet Editor</b>
+	</p>
+	<p>
+	  <b>Ship Designer</b>
+	</p>
+	<p>
+	  <b>Battle Simulator</b>
+	</p>
+	<p>
+	  <b>Treaty Editor</b>
+	</p>
+	<p>
+	  <b>Intelligence</b>
+	</p>
+	<p>
+	  <b>Text Editor</b>
+	</p>
+	<p>
+	  <b>Calculator</b>
+	</p>
+	<p>
+	  <b>Production</b> The production tool shows a players planets
+	  and what is being produced on it. This information is also
+	  available on the Planets table, but it's here in a more concise
+	  manner. 
+	</p>
+	<p>
+	  <b>Stockpiles</b> This tool is used much like the production
+	  tool in that it shows planets and their stockpiles for ease of
+	  use for the player.
+	</p>
+	<h4>Tabular data</h4>
+	<p>
+	  The bottom 1/2 of the application will be used for tabular data
+	  (tabular in the meaning of a grid layout.) Each table will have
+	  it's own tab across the top (configurable?).
+	</p>
+	<p>
+	  As with tools, tables will be generated by plugins. A common
+	  interface for tables will be that left clicking on a table
+	  header will sort the table by that column in ascending
+	  order. Right clicking on the header will sort in descending
+	  order. 
+	</p>
+	<p>
+	  Tables will also use a color code to show the validity of data
+	  by varying the background color of the row. Green indicates data
+	  taken directly from the turn report. Yellow indicates data
+	  entered by the user, and red is data gathered from turn report
+	  slices given by other places.
+	</p>
+	<p>
+	  <b>Groups</b> This table will also have a dropdown box to allow
+	  the user to select which race they wish to show information
+	  about. One of the choices should be "All Races". Columns for
+	  this table will be, at a minimum, Group number, ship type,
+	  number of ships, drive, attack, weapons, shields, cargo,
+	  location, destination, Race.
+	</p>
+	<p>
+	  Clicking on a group in the table will locate that group on the
+	  map.
+	</p>
+	<p>
+	  <b>Fleets</b> Very similiar to groups, but with fleet
+	  information instead.
+	</p>
+	<p>
+	  Clicking on a fleet in the table will locate that fleet on the
+	  map.
+	</p>
+	<p>
+	  <b>Incoming Groups</b> This will give a list of the groups that
+	  are incoming to a planet you own. Columns will be: destination,
+	  probable source, distance remaining.
+	</p>
+	<p>
+	  <b>Ship Types</b> This table is to show a player all of their
+	  ship designs. There will be a drop-down box that will also show
+	  other Races that the player has seen so that any of their ship
+	  designs can be shown.
+	</p>
+	<p>
+	  <b>Planets</b> This table will show the player all of their
+	  planets with the following information: number, name, size,
+	  resources, x, y, population, industry, capital, material,
+	  colonists, production, posture, and status.
+	</p>
+	<p>
+	  <b>Routes</b> This table will show the player all the routes
+	  between their planets. Clicking on a planet in the table will
+	  show the routes on the map.
+	</p>
+	<p>
+	  <b>Races</b> This table shows the player all of the races that
+	  they know about, along with information that is known about
+	  them. 
+	</p>
+	<p>
+	  <b>Battles</b> This table will show all battles that the player
+	  was involved in. It will have -- is this a good fit for a table?
+	</p>
+	<p>
+	  <b>Bombings</b> This will show the player which planets they
+	  lost and which they gained, along with who did the bombing and
+	  what the value is of the planet they've gained.
+	</p>
+	<h4>Menu</h4>
+	<p>
+	  The application will have a standard tool bar, the layout of
+	  which can be found <a
+		href="http://galaxyview.sourceforge.net/help/">here</a>.
+	</p>
+	<p>
+	  Whenever possible, menu selections will activate the appropriate
+	  tool or table and take the user there.
+	</p>
+	<p>
+	  The appliation will also have a standard status bar across the
+	  bottom.
+	</p>
+	<h1>Directory Structure</h1>
+	<h2>Startup files</h2>
+	<p>
+	  The location of startup files will be platform dependent and be
+	  in line with normal program conventions for that platform.
+	</p>
+	<p><b>Linux</b> A directory named .galaxyview will be created in
+	  the user's home directory.
+	</p>
+	<p><b>Microsoft Windows</b> A folder named GalaxyView will be
+	  created in the <code>Program Files</code> folder.
+	</p>
+	<p>
+	  The directory structure under this starting point should be the
+	  same on all platforms.<br />
+		<pre>
+		  <code>
+			GalaxyView.rfa
+			galaxyviewrc
+			&lt;gamename>.gdf
+			+tools
+			  +common
+			    // tools the same between all games go here
+			  +GNG
+			    // tools unique to GalaxyNG go here
+			  +Blind
+			    // tools unique to Blind Galaxy
+			  +GE
+			    // tools unique to GalaxyExplorer
+			+tables
+			  +common
+			  +GNG
+			  +Blind
+			  +GE
+			+map
+			  +common
+			  +GNG
+			  +Blind
+			  +GE
+		  </code>
+		</pre>
+	</p>
+	<p>
+	  The <code>tools</code>, <code>tables</code>, and
+	  <code>map</code> directories are for plugins. There are
+	  subdirectories for supported game types. A plugin is a shared
+	  library that implements a particular set of interfaces.
+	</p>
+	<h1>Program Startup</h1>
+	<p>
+	</p>
+		
+  </body>
+</html>

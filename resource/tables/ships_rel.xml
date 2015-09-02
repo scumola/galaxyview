@@ -1,0 +1,77 @@
+<?xml version="1.0"?>
+<relation>
+  <table name="shiptype">
+    <column>
+      <name>name</name>
+      <type>varchar</type>
+      <size>256</size>
+    </column>
+    <column>
+      <name>origin</name>
+      <type>varchar</type>
+      <size>256</size>
+    </column>
+    <column>
+      <name>drive</name>
+      <type>float</type>
+      <default>0</default>
+      <restraints>
+        <value type="allow">0</value>
+        <value type="minimum">1.0</value>
+      </restraints>
+    </column>
+    <column>
+      <name>attacks</name>
+      <type>integer</type>
+      <restraints>
+        <value type="minimum">0</value>
+      </restraints>
+    </column>
+    <column>
+      <name>weapons</name>
+      <type>float</type>
+      <default>0</default>
+      <restraints>
+        <value type="allow">0</value>
+        <value type="minimum">1.0</value>
+      </restraints>
+    </column>
+    <column>
+      <name>shields</name>
+      <type>float</type>
+      <default>0</default>
+      <restraints>
+        <value type="allow">0</value>
+        <value type="minimum">1.0</value>
+      </restraints>
+    </column>
+    <column>
+      <name>cargo</name>
+      <type>float</type>
+      <default>0</default>
+      <restraints>
+        <value type="allow">0</value>
+        <value type="minimum">1.0</value>
+      </restraints>
+    </column>
+    <column>
+      <name>class</name>
+      <type>varchar</type>
+      <size>256</size>
+    </column>
+    <column>
+      <name>comment</name>
+      <type>varchar</type>
+      <size>256</size>
+    </column>
+    <column>
+      <name>priority</name>
+      <type></type>
+    </column>
+  </table>
+
+  <table name="ship">
+    <column>
+      <name>
+
+</relation>

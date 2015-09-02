@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resource version="2.4.0.1">
+
+	<object class="wxDialog" name="deletebookmark_dialog">
+		<title>Delete Bookmarks</title>
+
+		<object class="wxFlexGridSizer">
+			<cols>1</cols>
+			<rows>2</rows>
+			<hgap>5</hgap>
+			<vgap>5</vgap>
+
+			<!-- Bookmark Character -->
+			<object class="sizeritem">
+				<object class="wxListBox" name="deletebookmark_list">
+					<size>-1,150</size>
+					<style>wxLB_MULTIPLE</style>
+				</object>
+				<flag>wxALIGN_CENTER_HORIZONTAL|wxGROW</flag>
+			</object>
+
+			<!-- Buttons -->
+			<object class="sizeritem">
+				<object class="wxFlexGridSizer">
+					<cols>2</cols>
+					<rows>1</rows>
+					<hgap>5</hgap>
+					<vgap>5</vgap>
+					
+					<object class="sizeritem">
+						<flag>wxGROW</flag>
+						<object class="wxButton" name="deletebookmark_ok">
+						<label>Delete Selected</label>
+					</object>
+					<flag>wxALIGN_CENTER</flag>
+				</object>
+
+				<object class="sizeritem">
+					<flag>wxGROW</flag>
+					<object class="wxButton" name="deletebookmark_cancel">
+						<label>Cancel</label>
+					</object>
+					<flag>wxALIGN_CENTER</flag>
+				</object>            
+			
+			</object>
+		</object>
+	</object>          
+</object>
+</resource>
+

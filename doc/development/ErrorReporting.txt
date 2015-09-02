@@ -1,0 +1,49 @@
+		Error Handling in GalaxyView
+
+        The GVError class is modeled after the perror() system in
+unix. It is a singleton class, which means that only one instance of
+the class exists in the program.
+
+        Because of this, creating this class is done a little bit
+differently than most classes. You need to declare a GVError pointer
+and use the class method GetInstance. For example:
+
+GVError* ep = GVError::GetInstance();
+
+        The class takes care of instantiating the object if it
+doesn't exist, but will return a pointer to the object if it has
+already been used at least once.
+
+        In general I *think* that the normal use of this object will be:
+
+*  error occurs in a function
+*  you get a pointer to the error object
+*  set the error number (ep->SetError(GVError::<error enum>)
+* throw an exception
+* the function that handles the exception will get a pointer to the
+   error object
+* ep->GetErrorMessage() returns the error message to be used to
+   display the error
+
+        One of the reasons for only returning a string is the Error
+object has no idea what the program wants to do with it: log it to a
+file, display it in a dialog, etc.
+
+        A shortcut, if the function wants to display the error
+directly, is to skip the SetError() step and call GetErrorMessage()
+while directly passing the error number
+(ep->GetErrorMessage(GVError::GV_NO_DB)).
+
+        Just because I visualize using the class this way, don't let
+that restrict you from using it in other ways.
+
+        In order to add more error messages to the class, you'll have
+to edit 2 files: GVError.h and GVError.cpp.  In GVError.h you'll edit
+the enum gverr, adding your error somewhere *prior* to the
+GV_BAD_ERROR enum. It should start with GV_ and be in all capitals.
+
+        It is IMPORTANT that you leave GV_BAD_ERROR and what follows
+as the last things in the list of enums.
+
+        You should then edit GVError.cpp and add both your enum and
+the message associated with it, again before GV_BAD_ERROR.
